@@ -328,10 +328,14 @@ legend {
   width: 100%;
 }
 
-#main .img {
-  width: 100%;
-}
-
 .slide-intro swiper-slide {
   height: 338px;
+}
+
+#main img {
+  width: 100%;
+}
+#main a {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=comm.css.map */

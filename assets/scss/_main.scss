@@ -3,3 +3,14 @@
     height: 338px;
   }
 }
+
+#main {
+  img {
+    width: 100%;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+  }
+}
