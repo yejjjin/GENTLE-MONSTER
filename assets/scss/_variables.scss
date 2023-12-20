@@ -1,11 +1,15 @@
 //변수 설정
 $primary: #fff;
 $secondary: #000;
-$txtdDefult: #000;
+$txtDefult: #000;
 
+$font-size: 16px;
+$font-family: "Noto Sans KR", sans-serif;
 // 반응형 미디어 쿼리
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1280px;
 $breakpoint-xxl: 1440px;
+
+//layout

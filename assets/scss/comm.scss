@@ -1,2 +1,28 @@
 @import "variables", "mixins", "fonts", "reset";
+
+//layout
+.wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.gnb-wrap {
+  display: none;
+}
+
+#main {
+  flex-grow: 1;
+}
+
+.slide-intro {
+  width: 100%;
+}
+
+#main {
+  .img {
+    width: 100%;
+  }
+}
+
 @import "main", "sub1";

@@ -46,6 +46,13 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
     />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- splide -->
+    <script src="path-to-the-script/splide-extension-auto-scroll.min.js"></script>
     <!-- swiper -->
     <link
       rel="stylesheet"
@@ -64,8 +71,68 @@
             <img src="./images/comm/LOGO1.png" alt="logo" />
           </a>
         </h1>
+        <div class="gnb-wrap">
+          <input
+            type="checkbox"
+            name="gnbNav"
+            id="gnbNav"
+            class="input-burger"
+          />
+          <label for="gnbNav" class="label-burger">
+            <span class="blind">전체 메뉴 보기</span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </label>
+          <div class="search-bar">
+            <input type="text" name="search" id="search" class="inp-search" />
+            <label for="search"></label>
+          </div>
+          <ul class="depth1">
+            <li>
+              <a href="#">SHOP</a>
+              <ul class="depth2">
+                <li><a href="#">SUNGLASS</a></li>
+                <li><a href="#">GLASS</a></li>
+              </ul>
+            </li>
+            <li><a href="#">COLLABORATION</a></li>
+            <li><a href="#">STYLE</a></li>
+            <li><a href="#">STORIES</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <ul class="depth2">
+              <li><a href="#">LOG IN</a></li>
+              <li><a href="#">CART</a></li>
+            </ul>
+          </ul>
+          <a href="#"><img src="./images/comm/LOGO 2.png" alt="logo" /></a>
+        </div>
       </div>
-      <div id="slide"></div>
+      <div id="slide">
+        <swiper-container
+          class="slide-intro"
+          pagination="true"
+          pagination-clickable="true"
+          navigation="true"
+          space-between="30"
+          centered-slides="true"
+          autoplay-delay="2500"
+          autoplay-disable-on-interaction="false"
+        >
+          <swiper-slide>Slide 1</swiper-slide>
+          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>Slide 3</swiper-slide>
+          <swiper-slide>Slide 4</swiper-slide>
+          <swiper-slide>Slide 5</swiper-slide>
+          <swiper-slide>Slide 6</swiper-slide>
+          <swiper-slide>Slide 7</swiper-slide>
+          <swiper-slide>Slide 8</swiper-slide>
+          <swiper-slide>Slide 9</swiper-slide>
+        </swiper-container>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </div>
       <div id="main">
         <!-- sec or list -->
         <ul>
