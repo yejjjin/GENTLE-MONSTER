@@ -310,22 +310,97 @@ legend {
   content: "";
 }
 
+body::before {
+  content: "";
+  background: url(../../images/comm/모바일_메인페이지.png) no-repeat 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+body {
+  position: relative;
+}
+
 .wrap {
-  min-height: 100vh;
+  min-height: 400vh;
   display: flex;
   flex-direction: column;
 }
 
-.gnb-wrap {
-  display: none;
-}
-
 #main {
   flex-grow: 1;
+  overflow: hidden;
 }
 
-.slide-intro {
+.bnr {
+  position: relative;
+}
+.bnr a {
+  display: block;
+}
+
+.content {
+  display: none;
   width: 100%;
+  height: 272px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+#header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.gnb-wrap {
+  display: flex;
+  align-items: center;
+}
+.gnb-wrap .input-burger:checked + .label-burger {
+  display: flex;
+}
+.gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(1) {
+  transform: translateY(3px) rotate(45deg);
+}
+.gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(2) {
+  display: none;
+}
+.gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(3) {
+  transform: translateY(-3px) rotate(-45deg);
+}
+.gnb-wrap .label-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+  justify-content: center;
+  z-index: 1100;
+}
+.gnb-wrap .label-burger .bar {
+  background-color: #212121;
+  height: 2px;
+  width: 20px;
+  border-radius: 2px;
+  display: block;
+  transition: all 0.3s;
+}
+
+#gnb {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .slide-intro swiper-slide {
