@@ -310,17 +310,6 @@ legend {
   content: "";
 }
 
-body::before {
-  content: "";
-  background: url(../../images/comm/모바일_메인페이지.png) no-repeat 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.5;
-}
-
 body {
   position: relative;
 }
@@ -332,15 +321,19 @@ body {
 }
 
 #main {
-  flex-grow: 1;
-  overflow: hidden;
+  min-height: 100%;
+}
+
+#footer {
+  height: 400px;
+  bottom: 0;
 }
 
 .bnr {
-  position: relative;
+  display: flex;
 }
 .bnr a {
-  display: block;
+  height: 272px;
 }
 
 .content {
@@ -367,6 +360,16 @@ body {
   display: flex;
   align-items: center;
 }
+.gnb-wrap .input-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+}
 .gnb-wrap .input-burger:checked + .label-burger {
   display: flex;
 }
@@ -378,6 +381,10 @@ body {
 }
 .gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(3) {
   transform: translateY(-3px) rotate(-45deg);
+}
+.gnb-wrap .input-burger:checked ~ #gnb {
+  display: flex;
+  left: 0;
 }
 .gnb-wrap .label-burger {
   display: flex;
@@ -400,7 +407,13 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  transition: all 0.3s;
 }
 
 .slide-intro swiper-slide {

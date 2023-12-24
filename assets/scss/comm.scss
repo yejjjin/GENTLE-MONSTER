@@ -1,20 +1,20 @@
 @import "variables", "mixins", "fonts", "reset";
 
-body::before {
-  content: "";
-  background: url(../../images/comm/모바일_메인페이지.png) no-repeat 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.5;
-}
+// body::before {
+//   content: "";
+//   background: url(../../images/comm/모바일_메인페이지.png) no-repeat 0 0;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   opacity: 0.5;
+// }
 body {
   position: relative;
 }
 
-//layout
+// //layout
 .wrap {
   min-height: 400vh;
   display: flex;
@@ -22,15 +22,21 @@ body {
 }
 
 #main {
-  flex-grow: 1;
-  overflow: hidden;
+  // flex-grow: 1;
+  // overflow: hidden;
+  min-height: 100%;
+}
+
+#footer {
+  height: $ftH;
+  bottom: 0;
 }
 
 .bnr {
-  position: relative;
+  // position: relative;
+  display: flex;
   a {
-    // height: 272px;
-    display: block;
+    height: 272px;
   }
 }
 
@@ -60,6 +66,15 @@ body {
   align-items: center;
 
   .input-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+
     // check o
     &:checked {
       & + .label-burger {
@@ -77,10 +92,10 @@ body {
         }
       }
 
-      // & ~ #gnb {
-      //   display: flex;
-      //   left: 0;
-      // }
+      & ~ #gnb {
+        display: flex;
+        left: 0;
+      }
     }
   }
 
@@ -107,10 +122,15 @@ body {
 #gnb {
   // background-color: $secondary;
   width: 100%;
-  // display: flex;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  transition: all 0.3s;
 }
 
 @import "main", "sub1";
