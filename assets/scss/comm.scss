@@ -34,9 +34,12 @@ body {
 
 .bnr {
   // position: relative;
-  display: flex;
+
   a {
+    display: block;
+    width: 100%;
     height: 272px;
+    font-size: 0;
   }
 }
 
@@ -129,7 +132,7 @@ body {
   z-index: 1000;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
   transition: all 0.3s;
 }
 

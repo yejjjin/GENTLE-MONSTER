@@ -329,11 +329,11 @@ body {
   bottom: 0;
 }
 
-.bnr {
-  display: flex;
-}
 .bnr a {
+  display: block;
+  width: 100%;
   height: 272px;
+  font-size: 0;
 }
 
 .content {
@@ -412,7 +412,7 @@ body {
   z-index: 1000;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
   transition: all 0.3s;
 }
 
