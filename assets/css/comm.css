@@ -310,42 +310,16 @@ legend {
   content: "";
 }
 
-body {
-  position: relative;
-}
-
 .wrap {
-  min-height: 400vh;
+  min-height: 305vh;
   display: flex;
   flex-direction: column;
 }
 
-#main {
-  min-height: 100%;
-}
-
 #footer {
+  background-color: #000;
   height: 400px;
   bottom: 0;
-}
-
-.bnr a {
-  display: block;
-  width: 100%;
-  height: 272px;
-  font-size: 0;
-}
-
-.content {
-  display: none;
-  width: 100%;
-  height: 272px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000;
-  color: #fff;
-  text-align: center;
 }
 
 #header {
@@ -372,6 +346,9 @@ body {
 }
 .gnb-wrap .input-burger:checked + .label-burger {
   display: flex;
+}
+.gnb-wrap .input-burger:checked + .label-burger .bar {
+  background-color: #fff;
 }
 .gnb-wrap .input-burger:checked + .label-burger .bar:nth-child(1) {
   transform: translateY(3px) rotate(45deg);
@@ -404,7 +381,9 @@ body {
 }
 
 #gnb {
+  background-color: #000;
   width: 100%;
+  height: 700px;
   position: fixed;
   top: 0;
   left: 100%;
@@ -414,6 +393,10 @@ body {
   justify-content: center;
   padding-top: 50px;
   transition: all 0.3s;
+}
+#gnb .logo2 {
+  position: absolute;
+  bottom: 20.32px;
 }
 
 .slide-intro swiper-slide {
