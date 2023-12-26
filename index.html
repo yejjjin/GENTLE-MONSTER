@@ -57,13 +57,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <!-- splide -->
-    <script src="path-to-the-script/splide-extension-auto-scroll.min.js"></script>
+    <!-- cdn 추가 -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-      integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU="
-      crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- auto scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
     <!-- swiper -->
     <link
       rel="stylesheet"
@@ -85,7 +87,6 @@
         <div class="gnb-wrap">
           <input
             type="checkbox"
-            checked
             name="gnbNav"
             id="gnbNav"
             class="input-burger"
@@ -123,74 +124,169 @@
           </div>
         </div>
       </div>
-      <div id="slide">스플라이드 사용법</div>
+      <div id="slide">
+        <div class="auto-scroll-wrap">
+          <div
+            id="splide-autoscroll"
+            class="splide"
+            aria-label="Beautiful Images"
+          >
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="./images/main/슬라이드1.png" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/main/슬라이드2.png" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/main/슬라이드3.png" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/main/슬라이드4.png" alt="" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/main/슬라이드5.png" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div id="main">
         <!-- sec or list -->
-        <ul class="bnr">
+        <ul class="depth1">
           <li>
             <a href="#">
               <img src="./images/main/모바일 메인1.jpg" alt="모바일메인1" />
             </a>
+            <ul class="depth2">
+              <li>
+                <a href="#"><div class="box1">SUNGLASS</div></a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#">
               <img src="./images/main/모바일 메인2.jpg" alt="모바일메인2" />
             </a>
+            <ul class="depth2">
+              <a href="#"><div class="box2">GLASS</div></a>
+            </ul>
           </li>
           <li>
             <a href="#">
               <img src="./images/main/모바일 메인3.jpg" alt="모바일메인3" />
             </a>
+            <ul class="depth2">
+              <a href="#"><div class="box3">COLLABORATION</div></a>
+            </ul>
           </li>
           <li>
             <a href="#">
               <img src="./images/main/모바일 메인4.jpg" alt="모바일메인4" />
             </a>
+            <ul class="depth2">
+              <a href="#"><div class="box4">STYLE</div></a>
+            </ul>
           </li>
         </ul>
-        <!-- <div class="content">
-            <div class="box1">SUNGLASS</div>
-            <div class="box2">GLASS</div>
-            <div class="box3">COLLABORATION</div>
-            <div class="box4">STYLE</div>
-            <div class="box5">STORE</div>
-          </div> -->
         <div class="best">
           BEST SELLER
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="./images/main/메인_베스트샐러1.png"
-                alt="bestseller1"
-              />
+          <div class="swiper swiper-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./images/main/메인_베스트샐러1.png"
+                  alt="bestseller1"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./images/main/메인_베스트샐러2.png"
+                  alt="bestseller2"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./images/main/메인_베스트샐러3.png"
+                  alt="bestseller3"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./images/main/메인_베스트샐러4.png"
+                  alt="bestseller4"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./images/main/메인_베스트샐러5.png"
+                  alt="bestseller5"
+                />
+              </div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <!-- Initialize Swiper -->
-        <script>
-          var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-          });
-        </script>
-        <div class="issue">BRAND ISSUE</div>
-        <a href="#">
-          <img src="./images/main/모바일 메인5.jpg" alt="모바일메인5" />
-        </a>
+            <div class="swiper-pagination"></div>
+          </div>
+          <span class="vm">
+            <a href="#"
+              >VIEW MORE
+              <img src="./images/comm/arrow-b.png" alt="viewmore" />
+            </a>
+          </span>
+        </div>
+
+        <div class="issue">
+          BRAND ISSUE
+          <ul class="slide-news">
+            <li>
+              <a href="#">
+                <img
+                  src="./images/main/메인_뉴스1 (하단 스와이퍼).jpg"
+                  alt="news1"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./images/main/메인_뉴스2 (하단 스와이퍼).png"
+                  alt="news2"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./images/main/메인_뉴스3 (하단 스와이퍼).png"
+                  alt="news3"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="./images/main/메인_뉴스5 (하단 스와이퍼).png"
+                  alt="news4"
+                />
+              </a>
+            </li>
+          </ul>
+          <span class="vm">
+            <a href="#"
+              >VIEW MORE
+              <img src="./images/comm/arrow-b.png" alt="viewmore" />
+            </a>
+          </span>
+        </div>
+        <div class="store">
+          <a href="#">
+            <img src="./images/main/모바일 메인5.jpg" alt="모바일메인5" />
+          </a>
+          <div class="box5">STORE</div>
+        </div>
       </div>
       <div id="footer">
         <ul class="depth1">
@@ -228,7 +324,7 @@
             </ul>
           </li>
         </ul>
-        <div class="bottom">1600-2126 | cs@gentlemonster.com</div>
+        <div class="contect">1600-2126 | cs@gentlemonster.com</div>
         <div class="copyright">
           All rights reserved. IICOMBINED Co., Ltd. © 2023 GENTLE MONSTER
         </div>

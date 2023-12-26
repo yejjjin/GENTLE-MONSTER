@@ -314,8 +314,15 @@ legend {
   min-height: 305vh;
   display: flex;
   flex-direction: column;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
+@media screen and (min-width: 1280) {
+  .wrap {
+    max-width: none;
+  }
+}
 #footer {
   background-color: #000;
   height: 400px;
@@ -399,14 +406,127 @@ legend {
   bottom: 20.32px;
 }
 
-.slide-intro swiper-slide {
+.auto-scroll-wrap {
+  margin-top: 50px;
+}
+.auto-scroll-wrap .splide {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.auto-scroll-wrap .splide__track {
+  overflow: visible;
+}
+.auto-scroll-wrap .splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slide-intro .swiper-slide {
   height: 338px;
 }
 
-#main img {
-  width: 100%;
+.swiper-slide {
+  height: 280px;
 }
-#main a {
+
+#main .depth1 a {
+  display: block;
+}
+#main .depth1 a img {
+  width: 100%;
+  display: block;
+  height: 272px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main .depth1 li {
+  position: relative;
+}
+
+.depth1 li:hover .depth2 {
+  width: 100%;
+  visibility: visible;
+  max-height: 272px;
+}
+
+#main .depth2 {
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-height: 0;
+}
+
+.vm {
+  height: 41px;
+}
+.vm img {
+  width: 100%;
+  height: 10px;
+  display: block;
+}
+
+.issue {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+.issue ul {
   display: flex;
   flex-direction: column;
+  height: 250px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: ani-slide 10s linear infinite alternate;
+}
+.issue ul a {
+  display: block;
+}
+.issue ul a img {
+  height: 250px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@keyframes ani-slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 0;
+  }
+  27% {
+    top: -250px;
+  }
+  52% {
+    top: -250px;
+  }
+  54% {
+    top: -500px;
+  }
+  77% {
+    top: -500px;
+  }
+  79% {
+    top: -750px;
+  }
+  98% {
+    top: -750px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.store a {
+  display: block;
+}
+.store a img {
+  width: 100%;
+  height: 202.44px;
+  display: block;
 }/*# sourceMappingURL=comm.css.map */

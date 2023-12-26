@@ -19,8 +19,16 @@
   min-height: 305vh;
   display: flex;
   flex-direction: column;
+  // 모바일버전 크기
+  max-width: 360px;
+  margin: 0 auto;
 }
 
+@media screen and (min-width: 1280) {
+  .wrap {
+    max-width: none;
+  }
+}
 // .slide {
 //   .box-slide {
 //     height: 338px;
@@ -29,39 +37,11 @@
 //   background-color: $primary;
 // }
 
-#main {
-  .best {
-  }
-}
-
 #footer {
   background-color: $secondary;
   height: $ftH;
   bottom: 0;
 }
-
-// .bnr {
-//   // position: relative;
-
-//   a {
-//     display: block;
-//     width: 100%;
-//     height: 272px;
-//     font-size: 0;
-//   }
-// }
-
-// .content {
-//   display: none;
-//   width: 100%;
-//   height: 272px;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   background-color: $secondary;
-//   color: $txtsecond;
-//   text-align: center;
-// }
 
 // header
 #header {
