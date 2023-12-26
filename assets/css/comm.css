@@ -430,33 +430,26 @@ legend {
   height: 280px;
 }
 
-#main .depth1 a {
+#main ul a {
   display: block;
 }
-#main .depth1 a img {
+#main ul a img {
   width: 100%;
   display: block;
   height: 272px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main .depth1 li {
+#main ul li {
   position: relative;
 }
 
-.depth1 li:hover .depth2 {
-  width: 100%;
-  visibility: visible;
-  max-height: 272px;
-}
-
-#main .depth2 {
+#main:checked .blackbox .box1 {
   background-color: #000;
   position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  max-height: 0;
+  width: 100%;
+  display: block;
+  height: 272px;
 }
 
 .vm {

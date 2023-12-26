@@ -25,7 +25,7 @@
 }
 
 #main {
-  .depth1 {
+  ul {
     a {
       img {
         width: 100%;
@@ -41,28 +41,27 @@
       position: relative;
     }
   }
+  // .box {
+  //   background-color: $secondary;
+  //   position: absolute;
+  //   width: 100%;
+  //   display: block;
+  //   height: 272px;
+  // }
 }
 
-.depth1 {
-  li {
-    &:hover {
-      .depth2 {
+#main {
+  &:checked {
+    .blackbox {
+      .box1 {
+        background-color: $secondary;
+        position: absolute;
         width: 100%;
-        visibility: visible;
-        max-height: 272px;
+        display: block;
+        height: 272px;
       }
     }
   }
-}
-
-#main .depth2 {
-  background-color: $secondary;
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  max-height: 0;
-  // visibility: hidden;
 }
 
 .vm {
