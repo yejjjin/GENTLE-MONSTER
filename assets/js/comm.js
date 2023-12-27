@@ -5,8 +5,8 @@
 // });
 
 var swiper = new Swiper(".swiper-slide", {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  slidesPerView: 2,
+  spaceBetween: 40,
   freeMode: true,
   pagination: {
     el: ".swiper-pagination",
