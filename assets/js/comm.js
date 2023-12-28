@@ -1,25 +1,10 @@
-// new Swiper(".swiper-container", {
-//   direction: "vertical", // 수직 슬라이드
-//   autoplay: true, // 자동 재생 여부
-//   loop: true, // 반복 재생 여부
-// });
-
-var swiper = new Swiper(".swiper-slide", {
-  slidesPerView: 2,
-  spaceBetween: 40,
-  freeMode: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
+// slide
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide("#splide-autoscroll", {
     type: "loop",
     drag: "free",
     focus: "center",
-    perPage: 3,
+    perPage: 2,
     autoScroll: {
       speed: 1,
     },
@@ -27,3 +12,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   splide.mount(window.splide.Extensions);
 });
+
+// best seller
+var swiper = new Swiper(".swiper-slide", {
+  slidesPerView: 2,
+  spaceBetween: 40,
+  freeMode: true,
+});
+
+// brand issue
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// $(document).ready(function () {
+//   $("#flip").click(function () {
+//     $("#panel").slideToggle("slow");
+//   });
+// });
