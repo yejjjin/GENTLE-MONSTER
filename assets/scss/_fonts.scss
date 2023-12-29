@@ -44,7 +44,7 @@
 }
 
 @font-face {
-  font-family: "Pretendard";
+  font-family: "PretendardR";
   font-weight: 400;
   font-display: swap;
   src: local("Pretendard Regular"),
@@ -77,4 +77,28 @@
   src: local("Pretendard Thin"),
     url(./woff2/Pretendard-Thin.woff2) format("woff2"),
     url(./woff/Pretendard-Thin.woff) format("woff");
+}
+
+@font-face {
+  font-family: "MaziusDisplayR";
+  font-weight: 400;
+  src: url("../fonts/MaziusDisplay-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MaziusDisplay";
+  font-weight: 600;
+  src: url("../fonts/MaziusDisplay-ExtraItalicBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MaziusDisplay";
+  font-weight: 500;
+  src: url("../fonts/MaziusDisplay-Extraitalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "MaziusDisplay";
+  font-weight: 700;
+  src: url("../fonts/MaziusDisplay-Bold.woff2") format("woff2");
 }
