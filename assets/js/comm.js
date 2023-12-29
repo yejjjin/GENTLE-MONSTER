@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "loop",
     drag: "free",
     focus: "center",
-    perPage: 2,
+    perPage: 1.5,
     autoScroll: {
       speed: 1,
     },
@@ -18,15 +18,6 @@ var swiper = new Swiper(".swiper-slide", {
   slidesPerView: 2,
   spaceBetween: 40,
   freeMode: true,
-});
-
-// brand issue
-var swiper = new Swiper(".mySwiper", {
-  direction: "vertical",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
 
 // $(document).ready(function () {
