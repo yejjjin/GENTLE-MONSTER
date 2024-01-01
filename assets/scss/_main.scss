@@ -11,6 +11,15 @@
   }
 }
 
+@media screen and (min-width: 1280px) {
+  #slide {
+    height: 1080px;
+    .auto-scroll-wrap {
+      display: flex;
+    }
+  }
+}
+
 .auto-scroll-wrap {
   width: 100%;
   height: 338px;
@@ -82,6 +91,32 @@
     li {
       position: relative;
     }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    height: 1080px;
+
+    a {
+      width: 50%;
+      height: 540px;
+      display: block;
+      .bnrimg {
+        width: 100%;
+        height: 540px;
+        display: block;
+        object-fit: cover;
+      }
+    }
+    .ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    // .bnr1 {
+    //   width: 50%;
+    //   height: 540px;
+    // }
   }
 }
 

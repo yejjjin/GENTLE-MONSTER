@@ -330,17 +330,6 @@ legend {
   content: "";
 }
 
-body::before {
-  content: "";
-  background: url(../../images/comm/모바일_메인페이지.png) no-repeat 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.5;
-}
-
 body {
   position: relative;
   font-family: "MaziusDisplayR";
@@ -350,11 +339,11 @@ body {
   min-height: calc(305vh - 400px);
   display: flex;
   flex-direction: column;
-  max-width: 360px;
+  max-width: 430px;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 1280) {
+@media screen and (min-width: 1280px) {
   .wrap {
     max-width: none;
   }
@@ -417,6 +406,16 @@ body {
   margin: 0 20px;
 }
 
+@media screen and (min-width: 1280px) {
+  #header {
+    max-width: none;
+    display: flex;
+    justify-content: center;
+  }
+  #header .gnb-wrap {
+    display: none;
+  }
+}
 .gnb-wrap {
   display: flex;
   align-items: center;
@@ -497,6 +496,14 @@ body {
   font-size: 15px;
 }
 
+@media screen and (min-width: 1280px) {
+  #slide {
+    height: 1080px;
+  }
+  #slide .auto-scroll-wrap {
+    display: flex;
+  }
+}
 .auto-scroll-wrap {
   width: 100%;
   height: 338px;
@@ -563,6 +570,27 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 1280px) {
+  .section {
+    height: 1080px;
+  }
+  .section a {
+    width: 50%;
+    height: 540px;
+    display: block;
+  }
+  .section a .bnrimg {
+    width: 100%;
+    height: 540px;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .section .ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .best {
   margin: 40px 0 70px 20px;
 }
