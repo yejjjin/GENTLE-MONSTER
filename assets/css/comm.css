@@ -374,6 +374,14 @@ body {
   flex-direction: column;
   color: #fff;
 }
+@media screen and (min-width: 1280px) {
+  #footer #footer {
+    height: 1080px;
+  }
+  #footer #footer img {
+    display: none;
+  }
+}
 #footer .gnb-bottom {
   width: 100%;
   text-align: center;
@@ -492,18 +500,25 @@ body {
 
 #slide .slide-tit {
   text-align: center;
-  padding-top: 50px;
   font-size: 15px;
 }
 
 @media screen and (min-width: 1280px) {
   #slide {
+    position: relative;
     height: 1080px;
     display: flex;
     align-items: center;
   }
   #slide .auto-scroll-wrap {
     display: flex;
+  }
+  #slide .slide-tit {
+    font-size: 30px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .auto-scroll-wrap {
@@ -558,13 +573,17 @@ body {
   display: none;
 }
 
+@media screen and (min-width: 1280px) {
+  .auto-scroll-wrap .splide__slide img {
+    height: 200px;
+  }
+}
 #main ul a {
   display: block;
 }
 #main ul a img {
   width: 100%;
   display: block;
-  height: 272px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -609,43 +628,13 @@ body {
     height: 100%;
   }
   .section .ul li a img {
-    display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 540px;
+    width: 100%;
+    height: 100%;
   }
   .best-mb {
     display: none;
   }
   .brandissue-mb {
-    display: none;
-  }
-  .brandissue-pc .mask {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .brandissue-pc .mask img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -960px;
-    margin-top: -540px;
-    width: 1920px;
-    height: 1080px;
-  }
-  .brandissue-pc .mask .line {
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0.8;
-    top: 0;
-  }
-  .brandissue-pc .mask:first-child .line {
     display: none;
   }
 }
@@ -694,4 +683,34 @@ body {
   width: 100%;
   height: 202.44px;
   display: block;
+}
+
+@media screen and (min-width: 1280px) {
+  .store {
+    margin-bottom: 95px;
+  }
+  .store a {
+    display: block;
+  }
+  .store a img {
+    height: 1080px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ft-txt {
+    display: flex;
+    align-items: center;
+    height: 1080px;
+    display: inline-block;
+  }
+  .ft-txt .txt1,
+  .ft-txt .txt2 {
+    color: #000;
+    font-size: 40px;
+  }
+  .ft-txt .txt2 {
+    color: rgba(0, 0, 0, 0);
+    stroke: #000 5px;
+  }
 }/*# sourceMappingURL=comm.css.map */

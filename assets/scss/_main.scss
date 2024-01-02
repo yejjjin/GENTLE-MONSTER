@@ -6,18 +6,27 @@
 #slide {
   .slide-tit {
     text-align: center;
-    padding-top: 50px;
+    // padding-top: 50px;
     font-size: 15px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   #slide {
+    position: relative;
     height: 1080px;
     display: flex;
     align-items: center;
     .auto-scroll-wrap {
       display: flex;
+    }
+
+    .slide-tit {
+      font-size: 30px;
+      position: absolute;
+      bottom: 200px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -77,13 +86,21 @@
   display: none;
 }
 
+@media screen and (min-width: 1280px) {
+  .auto-scroll-wrap {
+    .splide__slide img {
+      height: 200px;
+    }
+  }
+}
+
 #main {
   ul {
     a {
       img {
         width: 100%;
         display: block;
-        height: 272px;
+        // height: 272px;
         object-fit: cover;
       }
 
@@ -137,9 +154,10 @@
           height: 100%;
 
           img {
-            display: block;
-            object-fit: cover;
-            height: 540px;
+            // display: block;
+            // object-fit: cover;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -152,38 +170,6 @@
 
   .brandissue-mb {
     display: none;
-  }
-  .brandissue-pc {
-    .mask {
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .mask img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: -960px;
-      margin-top: -540px;
-      width: 1920px;
-      height: 1080px;
-    }
-
-    .mask .line {
-      position: absolute;
-      width: 1px;
-      height: 100%;
-      background-color: #fff;
-      opacity: 0.8;
-      top: 0;
-    }
-    .mask:first-child .line {
-      display: none;
-    }
   }
 }
 
@@ -240,6 +226,37 @@
       width: 100%;
       height: 202.44px;
       display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .store {
+    margin-bottom: 95px;
+    a {
+      display: block;
+      img {
+        height: 1080px;
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ft-txt {
+    display: flex;
+    align-items: center;
+    height: 1080px;
+    display: inline-block;
+    .txt1,
+    .txt2 {
+      color: $txtDefult;
+      font-size: 40px;
+    }
+    .txt2 {
+      color: #00000000;
+      stroke: #000 5px;
     }
   }
 }
