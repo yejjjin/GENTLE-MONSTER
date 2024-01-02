@@ -14,6 +14,8 @@
 @media screen and (min-width: 1280px) {
   #slide {
     height: 1080px;
+    display: flex;
+    align-items: center;
     .auto-scroll-wrap {
       display: flex;
     }
@@ -94,41 +96,13 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .section {
-    height: 1080px;
-
-    a {
-      width: 50%;
-      height: 540px;
-      display: block;
-      .bnrimg {
-        width: 100%;
-        height: 540px;
-        display: block;
-        object-fit: cover;
-      }
-    }
-    .ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    // .bnr1 {
-    //   width: 50%;
-    //   height: 540px;
-    // }
-  }
-}
-
-.best {
+.best-mb {
   margin: 40px 0 70px 20px;
   img {
     width: 180px;
     height: 243.81px;
   }
-  // .swiper-wrapper {
-  //   margin-bottom: 20px;
-  // }
+
   .swiper-slide {
     height: 340px;
     font-family: $font-scondary;
@@ -136,6 +110,80 @@
   p {
     // padding-top: 5px;
     font-size: 12px;
+  }
+}
+
+// main
+@media screen and (min-width: 1280px) {
+  .section {
+    height: 1080px;
+
+    .ul {
+      display: flex;
+      height: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+
+      li {
+        width: 50%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+
+        a {
+          // height: 540px;
+          display: block;
+          height: 100%;
+
+          img {
+            display: block;
+            object-fit: cover;
+            height: 540px;
+          }
+        }
+      }
+    }
+  }
+
+  .best-mb {
+    display: none;
+  }
+
+  .brandissue-mb {
+    display: none;
+  }
+  .brandissue-pc {
+    .mask {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mask img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -960px;
+      margin-top: -540px;
+      width: 1920px;
+      height: 1080px;
+    }
+
+    .mask .line {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+      opacity: 0.8;
+      top: 0;
+    }
+    .mask:first-child .line {
+      display: none;
+    }
   }
 }
 
@@ -151,7 +199,7 @@
   }
 }
 
-.issue {
+.brandissue {
   .swiper {
     width: 100%;
     height: 250px;

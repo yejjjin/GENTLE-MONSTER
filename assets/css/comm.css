@@ -499,6 +499,8 @@ body {
 @media screen and (min-width: 1280px) {
   #slide {
     height: 1080px;
+    display: flex;
+    align-items: center;
   }
   #slide .auto-scroll-wrap {
     display: flex;
@@ -570,42 +572,83 @@ body {
   position: relative;
 }
 
+.best-mb {
+  margin: 40px 0 70px 20px;
+}
+.best-mb img {
+  width: 180px;
+  height: 243.81px;
+}
+.best-mb .swiper-slide {
+  height: 340px;
+  font-family: "PretendardR";
+}
+.best-mb p {
+  font-size: 12px;
+}
+
 @media screen and (min-width: 1280px) {
   .section {
     height: 1080px;
   }
-  .section a {
-    width: 50%;
-    height: 540px;
-    display: block;
+  .section .ul {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
   }
-  .section a .bnrimg {
-    width: 100%;
-    height: 540px;
+  .section .ul li {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .section .ul li a {
+    display: block;
+    height: 100%;
+  }
+  .section .ul li a img {
     display: block;
     -o-object-fit: cover;
        object-fit: cover;
+    height: 540px;
   }
-  .section .ul {
-    display: flex;
-    flex-wrap: wrap;
+  .best-mb {
+    display: none;
+  }
+  .brandissue-mb {
+    display: none;
+  }
+  .brandissue-pc .mask {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .brandissue-pc .mask img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -960px;
+    margin-top: -540px;
+    width: 1920px;
+    height: 1080px;
+  }
+  .brandissue-pc .mask .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.8;
+    top: 0;
+  }
+  .brandissue-pc .mask:first-child .line {
+    display: none;
   }
 }
-.best {
-  margin: 40px 0 70px 20px;
-}
-.best img {
-  width: 180px;
-  height: 243.81px;
-}
-.best .swiper-slide {
-  height: 340px;
-  font-family: "PretendardR";
-}
-.best p {
-  font-size: 12px;
-}
-
 .vm {
   font-family: "MaziusDisplayR";
   height: 41px;
@@ -618,24 +661,24 @@ body {
   display: block;
 }
 
-.issue .swiper {
+.brandissue .swiper {
   width: 100%;
   height: 250px;
   margin: 10px 0;
 }
-.issue .swiper-slide {
+.brandissue .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.issue .swiper-slide img {
+.brandissue .swiper-slide img {
   display: block;
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.issue .swiper-pagination-bullet {
+.brandissue .swiper-pagination-bullet {
   --swiper-theme-color: #24ff00;
   width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 5px));
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 5px));

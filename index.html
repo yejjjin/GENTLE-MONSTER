@@ -84,6 +84,10 @@
     />
     <link rel="stylesheet" href="./assets/css/comm.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/vendor/modernizr.custom.min.js"></script>
+    <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="./js/main.js"></script>
     <script defer src="./assets/js/comm.js"></script>
     <!-- defer 붙여주기 -->
   </head>
@@ -167,80 +171,67 @@
       <div id="main">
         <div class="section">
           <ul class="ul">
-            <li class="bnr1">
+            <li>
               <a href="#">
-                <img
-                  class="bnrimg"
-                  src="./images/main/banner1.jpg"
-                  alt="bnr1"
-                />
+                <img src="./images/main/banner1.jpg" alt="bnr1" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img
-                  class="bnrimg"
-                  src="./images/main/banner2.jpg"
-                  alt="bnr2"
-                />
+                <img src="./images/main/banner2.jpg" alt="bnr2" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img
-                  class="bnrimg"
-                  src="./images/main/banner3.jpg"
-                  alt="bnr3"
-                />
+                <img src="./images/main/banner3.jpg" alt="bnr3" />
               </a>
             </li>
             <li>
               <a href="#">
-                <img
-                  class="bnrimg"
-                  src="./images/main/banner4.jpg"
-                  alt="bnr4"
-                />
+                <img src="./images/main/banner4.jpg" alt="bnr4" />
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="best">
-          <h2 class="best-tit">BEST SELLER</h2>
-          <div class="swiper best-slide">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="./images/main/best seller1.png" alt="bestseller1" />
-                <p>Lococo 01<br />330,000 won</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/main/best seller2.png" alt="bestseller2" />
-                <p>Alio X 01<br />310,000 won</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/main/best seller3.png" alt="bestseller3" />
-                <p>Nonno 01<br />289,000 won</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/main/best seller4.png" alt="bestseller4" />
-                <p>Rob KC1<br />289,000 won</p>
-              </div>
-              <div class="swiper-slide">
-                <img src="./images/main/best seller5.png" alt="bestseller5" />
-                <p>Gaussian 01<br />340,000 won</p>
+        <div class="bestseller">
+          <div class="best-mb">
+            <h2 class="best-tit">BEST SELLER</h2>
+            <div class="swiper best-slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/main/best seller1.png" alt="bestseller1" />
+                  <p>Lococo 01<br />330,000 won</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/best seller2.png" alt="bestseller2" />
+                  <p>Alio X 01<br />310,000 won</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/best seller3.png" alt="bestseller3" />
+                  <p>Nonno 01<br />289,000 won</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/best seller4.png" alt="bestseller4" />
+                  <p>Rob KC1<br />289,000 won</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/main/best seller5.png" alt="bestseller5" />
+                  <p>Gaussian 01<br />340,000 won</p>
+                </div>
               </div>
             </div>
+            <span class="vm">
+              <a href="#"
+                >VIEW MORE
+                <img src="./images/comm/arrow-b.png" alt="viewmore" />
+              </a>
+            </span>
           </div>
-          <span class="vm">
-            <a href="#"
-              >VIEW MORE
-              <img src="./images/comm/arrow-b.png" alt="viewmore" />
-            </a>
-          </span>
+          <div class="best-pc"></div>
         </div>
 
-        <div class="issue">
+        <div class="brandissue-mb">
           <h2 class="issue-tit">BRAND ISSUE</h2>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -274,6 +265,27 @@
               <img src="./images/comm/arrow-b.png" alt="viewmore" />
             </a>
           </span>
+        </div>
+        <div class="brandissue-pc">
+          <div class="scene" id="scene-3">
+            <div class="mask" id="apple-1">
+              <img src="./images/main/brand issue1.jpg" alt="" />
+              <div class="line"></div>
+            </div>
+            <div class="mask" id="apple-2">
+              <img src="./images/main/brand issue2.png" alt="" />
+              <div class="line"></div>
+            </div>
+            <div class="mask" id="apple-3">
+              <img src="./images/main/brand issue3.png" alt="" />
+              <div class="line"></div>
+            </div>
+            <div class="mask" id="apple-4">
+              <img src="./images/main/brand issue4.png" alt="" />
+              <div class="line"></div>
+            </div>
+          </div>
+          <!-- /.scene#scene-3 -->
         </div>
 
         <div class="store">
