@@ -493,34 +493,14 @@ body {
   display: flex;
 }
 
-.best-tit,
-.issue-tit {
-  font-size: 18px;
+#slide {
+  overflow: hidden;
 }
-
 #slide .slide-tit {
   text-align: center;
   font-size: 15px;
 }
 
-@media screen and (min-width: 1280px) {
-  #slide {
-    position: relative;
-    height: 1080px;
-    display: flex;
-    align-items: center;
-  }
-  #slide .auto-scroll-wrap {
-    display: flex;
-  }
-  #slide .slide-tit {
-    font-size: 30px;
-    position: absolute;
-    bottom: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 .auto-scroll-wrap {
   width: 100%;
   height: 338px;
@@ -574,21 +554,90 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
-  .auto-scroll-wrap .splide__slide img {
-    height: 200px;
+  #slide {
+    position: relative;
+    height: 1080px;
+    display: flex;
+    align-items: center;
+  }
+  #slide .auto-scroll-wrap {
+    display: flex;
+  }
+  #slide .slide-tit {
+    font-size: 25px;
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #slide .auto-scroll-wrap .splide__slide img {
+    height: 150px;
   }
 }
-#main ul a {
+.section ul p {
+  display: none;
+}
+.section ul a {
   display: block;
 }
-#main ul a img {
+.section ul a img {
   width: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#main ul li {
+.section ul li {
   position: relative;
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    height: 1080px;
+  }
+  .section .depth1 {
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  .section .depth1 li {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .section .depth1 li a {
+    position: relative;
+    display: block;
+    height: 100%;
+    color: #fff;
+  }
+  .section .depth1 li a img {
+    width: 100%;
+    height: 100%;
+  }
+  .section .depth1 li .txt1 {
+    font-size: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
+  .section .depth1 li:hover .txt1 {
+    visibility: visible;
+    max-height: 540px;
+  }
+}
+.best-pc {
+  display: none;
 }
 
 .best-mb {
@@ -599,6 +648,7 @@ body {
   height: 243.81px;
 }
 .best-mb .swiper-slide {
+  padding-top: 10px;
   height: 340px;
   font-family: "PretendardR";
 }
@@ -606,38 +656,11 @@ body {
   font-size: 12px;
 }
 
-@media screen and (min-width: 1280px) {
-  .section {
-    height: 1080px;
-  }
-  .section .ul {
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-  }
-  .section .ul li {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-  }
-  .section .ul li a {
-    display: block;
-    height: 100%;
-  }
-  .section .ul li a img {
-    width: 100%;
-    height: 100%;
-  }
-  .best-mb {
-    display: none;
-  }
-  .brandissue-mb {
-    display: none;
-  }
+.best-tit,
+.issue-tit {
+  font-size: 18px;
 }
+
 .vm {
   font-family: "MaziusDisplayR";
   height: 41px;
@@ -650,29 +673,44 @@ body {
   display: block;
 }
 
-.brandissue .swiper {
+@media screen and (min-width: 1280px) {
+  .bestseller .best-mb {
+    display: none;
+  }
+  .best-pc {
+    display: flex;
+    height: 1080px;
+    background-color: #000;
+  }
+}
+.brandissue-mb .swiper {
   width: 100%;
   height: 250px;
   margin: 10px 0;
 }
-.brandissue .swiper-slide {
+.brandissue-mb .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.brandissue .swiper-slide img {
+.brandissue-mb .swiper-slide img {
   display: block;
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.brandissue .swiper-pagination-bullet {
+.brandissue-mb .swiper-pagination-bullet {
   --swiper-theme-color: #24ff00;
   width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 5px));
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 5px));
 }
 
+@media screen and (min-width: 1280px) {
+  .brandissue-mb {
+    display: none;
+  }
+}
 .store {
   margin: 70px 0 95.56px 0;
 }
@@ -697,6 +735,10 @@ body {
     display: block;
   }
 }
+.ft-txt {
+  display: none;
+}
+
 @media screen and (min-width: 1280px) {
   .ft-txt {
     display: flex;

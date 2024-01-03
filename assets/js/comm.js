@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Check screen width and set perPage accordingly
   if (window.innerWidth >= 1280) {
-    splideOptions.perPage = 0.7;
+    splideOptions.perPage = 0.8;
   } else {
     splideOptions.perPage = 1.5;
   }
