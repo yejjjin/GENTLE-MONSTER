@@ -494,16 +494,18 @@ body {
 }
 
 #slide {
+  height: 338px;
   overflow: hidden;
 }
 #slide .slide-tit {
   text-align: center;
   font-size: 15px;
+  padding-bottom: 20px;
 }
 
 .auto-scroll-wrap {
   width: 100%;
-  height: 338px;
+  height: 273px;
   display: flex;
   align-items: center;
 }
@@ -583,6 +585,7 @@ body {
 .section ul a img {
   width: 100%;
   display: block;
+  height: 272px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -649,11 +652,21 @@ body {
 }
 .best-mb .swiper-slide {
   padding-top: 10px;
-  height: 340px;
+  height: 330px;
   font-family: "PretendardR";
 }
 .best-mb p {
   font-size: 12px;
+}
+.best-mb .icon {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.best-mb .icon .heart {
+  height: 15.3px;
+  width: 18px;
 }
 
 .best-tit,
@@ -664,8 +677,6 @@ body {
 .vm {
   font-family: "MaziusDisplayR";
   height: 41px;
-  margin-top: 26px;
-  z-index: 2000;
 }
 .vm img {
   width: 100%;
@@ -683,10 +694,19 @@ body {
     background-color: #000;
   }
 }
+.brandissue-mb .issue-tit {
+  padding-left: 20px;
+}
+.brandissue-mb .vm {
+  padding-left: 20px;
+}
+.brandissue-mb .vm img {
+  padding-left: 20px;
+}
 .brandissue-mb .swiper {
   width: 100%;
   height: 250px;
-  margin: 10px 0;
+  margin: 10px 0 20px;
 }
 .brandissue-mb .swiper-slide {
   display: flex;
