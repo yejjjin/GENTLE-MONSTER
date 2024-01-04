@@ -56,3 +56,63 @@ var swiper = new Swiper(".mySwiper", {
 //     $("#panel").slideToggle("slow");
 //   });
 // });
+
+// ft-txt
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.to(".marquee-track.l h1", {
+    scrollTrigger: {
+      trigger: ".marquee-track.l h1",
+      start: "top bottom",
+      end: "400% top",
+      scrub: 0.6,
+    },
+    xPercent: 25,
+    duration: 3,
+    ease: "linear",
+  });
+
+  gsap.to(".marquee-track.r h1", {
+    scrollTrigger: {
+      trigger: ".marquee-track.r h1",
+      end: "bottom top",
+      scrub: 0.6,
+    },
+    xPercent: -25,
+    duration: 3,
+    ease: "linear",
+  });
+});
+
+// brandissue
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollPanels = document.querySelectorAll(
+    ".horizontal-scroll .horizontal-panel"
+  );
+  const pinPanels = document.querySelectorAll(
+    ".horizontal-pin .horizontal-panel"
+  );
+  const horizontalScroll = document.querySelector(".horizontal-scroll");
+
+  gsap.to(scrollPanels, {
+    xPercent: -100 * (scrollPanels.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".horizontal-scroll",
+      pin: true,
+      scrub: 0.6,
+      markers: true,
+      end: () => `+=${horizontalScroll.offsetWidth * scrollPanels.length}`,
+    },
+  });
+
+  pinPanels.forEach((panel) => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: panel,
+        pin: true,
+        pinSpacing: false,
+        start: "top top",
+      },
+    });
+  });
+});
