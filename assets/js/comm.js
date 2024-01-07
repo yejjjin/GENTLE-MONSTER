@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   splide.mount(); // Mounts the Splide instance after configuration.
 });
 
-// best seller
+// best seller mb
 var swiper = new Swiper(".best-slide", {
   slidesPerView: 2,
   spaceBetween: 40,
