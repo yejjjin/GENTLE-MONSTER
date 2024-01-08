@@ -232,6 +232,10 @@
 }
 
 // brandissu mb
+// .brandissue-pc {
+//   visibility: hidden;
+// }
+
 .brandissue-mb {
   .issue-tit {
     padding-left: 20px;
@@ -282,42 +286,43 @@
   }
 
   .brandissue-pc {
+    height: 600vh;
+    .section {
+      height: 1080px;
+    }
+
     .horizontal-scroll {
+      height: 0;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
+      overflow-x: hidden;
     }
 
     .horizontal-panel {
+      color: $uniqe;
+      text-align: center;
+      background-color: #000;
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
-      justify-content: space-between;
-      min-width: 100vw;
-      min-height: 1080px;
+      justify-content: center;
+      height: 1080px;
+      overflow: hidden;
+      position: relative;
+
+      .issue-tit {
+        font-size: 40px;
+        position: absolute;
+        left: 60%;
+        top: 50%;
+      }
 
       img {
-        margin-top: auto;
-        margin-left: auto;
-        max-width: 100%;
-        max-height: 1080px;
-        object-fit: contain;
-      }
-
-      &.a {
-        background-color: aliceblue;
-      }
-
-      &.b {
-        background-color: aquamarine;
-      }
-
-      &.c {
-        background-color: antiquewhite;
-      }
-
-      &.d {
-        background-color: thistle;
+        margin-left: 0;
+        width: 50%;
+        height: 500px;
+        object-fit: cover;
       }
     }
   }
@@ -343,7 +348,7 @@
     a {
       display: block;
       img {
-        height: 1080px;
+        height: 900px;
         display: block;
       }
     }
