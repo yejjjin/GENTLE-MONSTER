@@ -36,7 +36,7 @@
   src: local("Pretendard Regular"), url(./woff2/Pretendard-Regular.woff2) format("woff2"), url(./woff/Pretendard-Regular.woff) format("woff");
 }
 @font-face {
-  font-family: "Pretendard";
+  font-family: "Pretendardl";
   font-weight: 300;
   font-display: swap;
   src: local("Pretendard Light"), url(./woff2/Pretendard-Light.woff2) format("woff2"), url(./woff/Pretendard-Light.woff) format("woff");
@@ -64,7 +64,7 @@
   src: url("../fonts/MaziusDisplay-ExtraItalicBold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "MaziusDisplay";
+  font-family: "MaziusDisplayi";
   font-weight: 500;
   src: url("../fonts/MaziusDisplay-Extraitalic.woff2") format("woff2");
 }
@@ -756,10 +756,19 @@ body {
     position: relative;
   }
   .brandissue-pc .horizontal-panel .issue-tit {
+    text-align: right;
     font-size: 40px;
     position: absolute;
     left: 60%;
-    top: 50%;
+    top: 35%;
+    margin-right: 25px;
+  }
+  .brandissue-pc .horizontal-panel .issue-tit p {
+    text-align: right;
+    color: #fff;
+    font-family: "Pretendardl";
+    font-size: 20px;
+    line-height: 1.5;
   }
   .brandissue-pc .horizontal-panel img {
     margin-left: 0;

@@ -312,10 +312,20 @@
       position: relative;
 
       .issue-tit {
+        text-align: right;
         font-size: 40px;
         position: absolute;
         left: 60%;
-        top: 50%;
+        top: 35%;
+        margin-right: 25px;
+
+        p {
+          text-align: right;
+          color: $txtsecond;
+          font-family: $font-prelight;
+          font-size: 20px;
+          line-height: 1.5;
+        }
       }
 
       img {
