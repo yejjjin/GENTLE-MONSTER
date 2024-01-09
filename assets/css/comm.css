@@ -792,14 +792,16 @@ body {
 
 @media screen and (min-width: 1280px) {
   .store {
-    margin-bottom: 95px;
+    margin: 0 auto;
   }
-  .store a {
-    display: block;
+  .store .image-area {
+    margin: 0 auto;
   }
-  .store a img {
-    height: 900px;
-    display: block;
+  .store .image-area .image-area__image {
+    margin: 0 auto;
+  }
+  .store .image-area .image-area__image .image-area__image > img {
+    width: 100%;
   }
 }
 .section2 {

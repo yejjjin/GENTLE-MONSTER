@@ -354,12 +354,15 @@
 // store pc
 @media screen and (min-width: 1280px) {
   .store {
-    margin-bottom: 95px;
-    a {
-      display: block;
-      img {
-        height: 900px;
-        display: block;
+    // margin-bottom: 95px;
+    margin: 0 auto;
+    .image-area {
+      margin: 0 auto;
+      .image-area__image {
+        margin: 0 auto;
+        .image-area__image > img {
+          width: 100%;
+        }
       }
     }
   }
