@@ -31,7 +31,7 @@ body {
   }
 }
 
-#footer {
+#footer-mb {
   font-family: $font-scondary;
   background-color: $secondary;
   color: $txtsecond;
@@ -55,15 +55,6 @@ body {
         display: flex;
         flex-direction: column;
         color: $txtsecond;
-      }
-    }
-  }
-
-  @media screen and (min-width: 1280px) {
-    #footer {
-      height: 1080px;
-      img {
-        display: none;
       }
     }
   }
@@ -93,6 +84,67 @@ body {
     a {
       display: block;
       color: $txtsecond;
+    }
+  }
+}
+#footer-pc {
+  display: none;
+}
+
+// footer-pc
+@media screen and (min-width: 1280px) {
+  #footer-mb {
+    display: none;
+  }
+  #footer-pc {
+    text-align: center;
+    background-color: $secondary;
+    color: $txtsecond;
+    font-family: $font-scondary;
+    display: flex;
+    height: 1000px;
+    position: relative;
+    flex-direction: column;
+
+    .memu {
+      display: flex;
+      justify-content: center;
+      padding: 100px 0 130px;
+
+      .memuli {
+        width: 33.333%;
+        font-size: 80px;
+
+        .depth2 {
+          font-size: 35px;
+          padding: 85px 0 35px;
+
+          a {
+            transition: color 0.3s ease;
+            &:hover {
+              color: $uniqe;
+            }
+          }
+        }
+
+        .tit {
+          border-bottom: 1px solid $txtsecond;
+        }
+      }
+
+      a {
+        color: $txtsecond;
+      }
+    }
+
+    .gnb-bottom {
+      .contect {
+        padding-bottom: 23px;
+        font-size: 25px;
+      }
+      .copyright {
+        font-size: 12px;
+      }
     }
   }
 }

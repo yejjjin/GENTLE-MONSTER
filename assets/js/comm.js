@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: ".horizontal-scroll",
       pin: true,
       scrub: 0.6,
-      markers: true,
+      markers: false,
       end: () => `+=${horizontalScroll.offsetWidth * scrollPanels.length}`,
     },
   });
@@ -129,14 +129,14 @@ function fn() {
       end: "+=150%",
       scrub: true,
       pin: true,
-      markers: true,
+      markers: false,
       pinSpacing: true,
     },
   });
   tl.fromTo(
     target,
     {
-      scale: 0.5,
+      scale: 0.6,
     },
     {
       scale: 1,
