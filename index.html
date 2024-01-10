@@ -1,617 +1,768 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gentle monster</title>
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="페이지 제목" />
-    <meta property="og:description" content="페이지 설명" />
-    <meta
-      property="og:image"
-      content="http://www.mysite.com/article/article1_featured_image.jpg"
-    />
-    <meta
-      property="og:url"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="페이지 제목" />
-    <meta name="twitter:description" content="페이지 설명" />
-    <meta
-      name="twitter:image"
-      content="http://www.mysite.com/article/article1.html"
-    />
-    <meta name="twitter:domain" content="사이트 명" />
-    <!-- swiper -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <link rel="icon" href="./favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <!-- google icons -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
-      rel="stylesheet"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>gentle monster</title>
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="페이지 제목" />
+        <meta property="og:description" content="페이지 설명" />
+        <meta property="og:image" content="http://www.mysite.com/article/article1_featured_image.jpg" />
+        <meta property="og:url" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="페이지 제목" />
+        <meta name="twitter:description" content="페이지 설명" />
+        <meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
+        <meta name="twitter:domain" content="사이트 명" />
+        <!-- swiper -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+        <link rel="icon" href="./favicon.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <!-- google icons -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+            rel="stylesheet"
+        />
 
-    <!-- google symbols -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
-    />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <!-- line-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-    />
-    <!-- gsap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
-    <!-- splide -->
-    <!-- cdn 추가 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <!-- auto scroll -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+        <!-- google symbols -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+        />
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <!-- line-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <!-- gsap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+        <!-- splide -->
+        <!-- cdn 추가 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <!-- auto scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
 
-    <!-- jquery cdn -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/comm.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- BESTSELLER SCROLL -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/gsap.min.js"></script>
-    <script src="./assets/js/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/ScrollSmoother.min.js"></script>
-    <script src="./assets/js/SplitText.min.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <script defer src="./assets/js/comm.js"></script>
-    <!-- defer 붙여주기 -->
-  </head>
-  <body>
-    <div class="wrap">
-      <div id="header">
-        <h1 id="logo">
-          <a href="#">
-            <img src="./images/comm/LOGO1.png" alt="logo" />
-          </a>
-        </h1>
-        <div class="gnb-wrap">
-          <input
-            type="checkbox"
-            name="gnbNav"
-            id="gnbNav"
-            class="input-burger"
-          />
-          <label for="gnbNav" class="label-burger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="blind">전체 메뉴 보기</span>
-          </label>
-          <div id="gnb">
-            <ul class="depth1">
-              <li>
-                <a href="#">SHOP</a>
-                <ul class="depth2">
-                  <li><a href="#">SUNGLASS</a></li>
-                  <li><a href="#">GLASS</a></li>
+        <!-- jquery cdn -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/comm.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- BESTSELLER SCROLL -->
+        <script src="./assets/js/jquery.js"></script>
+        <script src="./assets/js/gsap.min.js"></script>
+        <script src="./assets/js/ScrollTrigger.min.js"></script>
+        <script src="./assets/js/ScrollSmoother.min.js"></script>
+        <script src="./assets/js/SplitText.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script defer src="./assets/js/comm.js"></script>
+        <!-- defer 붙여주기 -->
+    </head>
+    <body>
+        <div class="wrap">
+            <div id="header">
+                <h1 id="logo">
+                    <a href="#">
+                        <img src="./images/comm/LOGO1.png" alt="logo" />
+                    </a>
+                </h1>
+                <div class="gnb-wrap">
+                    <input type="checkbox" name="gnbNav" id="gnbNav" class="input-burger" />
+                    <label for="gnbNav" class="label-burger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="blind">전체 메뉴 보기</span>
+                    </label>
+                    <div id="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#">SHOP</a>
+                                <ul class="depth2">
+                                    <li><a href="#">SUNGLASS</a></li>
+                                    <li><a href="#">GLASS</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">COLLABORATION</a></li>
+                            <li><a href="#">STYLE</a></li>
+                            <li><a href="#">STORIES</a></li>
+                            <li><a href="#">STORE</a></li>
+                            <li><a href="#">SERVICES</a></li>
+                            <ul class="depth2">
+                                <li><a href="#">LOG IN</a></li>
+                                <li><a href="#">CART</a></li>
+                            </ul>
+                        </ul>
+                        <div class="logo2">
+                            <img src="./images/comm/LOGO 2.png" alt="logo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="slide">
+                <div class="auto-scroll-wrap">
+                    <div id="splide-autoscroll" class="splide" aria-label="Beautiful Images">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <img src="./images/main/slide1.png" alt="" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/main/slide2.png" alt="" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/main/slide3.png" alt="" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/main/slide4.png" alt="" />
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="./images/main/slide5.png" alt="" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-tit">GENTLE MONSTER<br />2024 COLLECTION</div>
+            </div>
+
+            <div id="main">
+                <div class="section">
+                    <ul class="depth1">
+                        <li>
+                            <a href="#">
+                                <img src="./images/main/banner1.jpg" alt="bnr1" />
+                                <p class="txt1">SUNGLASS</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/main/banner2.jpg" alt="bnr2" />
+                                <p class="txt1">GLASS</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/main/banner3.jpg" alt="bnr3" />
+                                <p class="txt1">COLLABORATION</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./images/main/banner4.jpg" alt="bnr4" />
+                                <p class="txt1">STYLE</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="_m">
+                    <section class="s4">
+                        <div class="visual">
+                            <div class="img-area">
+                                <div class="img-box">
+                                    <img src="https://www.samnok.co.kr/asset/img/main/s4_bg02.jpg" alt="" />
+                                </div>
+                                <div class="txt-box">
+                                    <div class="section-title n1">
+                                        <small>사업분야</small>
+                                        <h4>
+                                            Business <br />
+                                            Line
+                                        </h4>
+                                        <a class="more" href="/business/carbon.php"
+                                            ><span>View more</span><i class="xi-arrow-right"></i
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section-title n2">
+                                <small>사업분야</small>
+                                <h4>
+                                    Business <br />
+                                    Line
+                                </h4>
+                                <a class="more" href="/business/carbon.php"
+                                    ><span>View more</span><i class="xi-arrow-right"></i
+                                ></a>
+                            </div>
+                        </div>
+
+                        <!-- 횡 스크롤 영역 -->
+                        <div class="horizon-scroll-area">
+                            <a class="card" href="/business/carbon.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span
+                                                ><img src="https://www.samnok.co.kr/asset/img/main/s4_img01.jpg" alt=""
+                                            /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <small>제작</small>
+                                            <strong>PRODUCTION</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <small>제작</small>
+                                        <strong>PRODUCTION</strong>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="card" href="/business/galvanized.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span
+                                                ><img src="https://www.samnok.co.kr/asset/img/main/s4_img02.jpg" alt=""
+                                            /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <small>용융아연도금</small>
+                                            <strong>PLATING</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <small>용융아연도금</small>
+                                        <strong>PLATING</strong>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="card" href="/business/stamp.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span
+                                                ><img src="https://www.samnok.co.kr/asset/img/main/s4_img03.jpg" alt=""
+                                            /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <small>도장</small>
+                                            <strong>PAINTING</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <small>도장</small>
+                                        <strong>PAINTING</strong>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="card" href="/business/logistic.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span
+                                                ><img src="https://www.samnok.co.kr/asset/img/main/s4_img04.jpg" alt=""
+                                            /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <small>물류</small>
+                                            <strong>DISTRIBUTION</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <small>물류</small>
+                                        <strong>DISTRIBUTION</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 모바일 -->
+                        <div class="mobile">
+                            <div class="visual02 fade-down">
+                                <div class="img-area">
+                                    <!-- <div class="img-box"><img src="asset/img/main/s4_bg02.jpg" alt=""></div>	-->
+                                    <div class="txt-box">
+                                        <div class="section-title n1">
+                                            <small>사업분야</small>
+                                            <h4>
+                                                Business <br />
+                                                Line
+                                            </h4>
+                                            <a class="more" href="/business/carbon.php"
+                                                ><span>View more</span><i class="xi-arrow-right"></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="mobile-slide" class="swiper-container fade-down">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="https://www.samnok.co.kr/business/carbon.php" class="mini-box">
+                                            <div class="img-box">
+                                                <span
+                                                    ><img
+                                                        src="https://www.samnok.co.kr/asset/img/main/s4_img01.jpg"
+                                                        alt=""
+                                                /></span>
+                                            </div>
+                                            <div class="txt-box n1">
+                                                <small>제작</small>
+                                                <strong>PRODUCTION</strong>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="https://www.samnok.co.kr/business/galvanized.php" class="mini-box">
+                                            <div class="img-box">
+                                                <span
+                                                    ><img
+                                                        src="https://www.samnok.co.kr/asset/img/main/s4_img02.jpg"
+                                                        alt=""
+                                                /></span>
+                                            </div>
+                                            <div class="txt-box n1">
+                                                <small>용융아연도금</small>
+                                                <strong>PLATING</strong>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="https://www.samnok.co.kr/business/stamp.php" class="mini-box">
+                                            <div class="img-box">
+                                                <span
+                                                    ><img
+                                                        src="https://www.samnok.co.kr/asset/img/main/s4_img03.jpg"
+                                                        alt=""
+                                                /></span>
+                                            </div>
+                                            <div class="txt-box n1">
+                                                <small>도장</small>
+                                                <strong>PAINTING</strong>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="https://www.samnok.co.kr/business/logistic.php" class="mini-box">
+                                            <div class="img-box">
+                                                <span
+                                                    ><img
+                                                        src="https://www.samnok.co.kr/asset/img/main/s4_img04.jpg"
+                                                        alt=""
+                                                /></span>
+                                            </div>
+                                            <div class="txt-box n1">
+                                                <small>물류</small>
+                                                <strong>DISTRIBUTION</strong>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="arrow">
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="bestseller">
+                    <div class="best-mb">
+                        <h2 class="best-tit">BEST SELLER</h2>
+                        <div class="swiper best-slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./images/main/best seller1.png" alt="bestseller1" />
+                                    <div class="icon">
+                                        <p>Lococo 01<br />330,000 won</p>
+                                        <img src="./images/comm/Vector.svg" alt="" class="heart" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/main/best seller2.png" alt="bestseller2" />
+                                    <div class="icon">
+                                        <p>Alio X 01<br />310,000 won</p>
+                                        <img src="./images/comm/Vector.svg" alt="" class="heart" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/main/best seller3.png" alt="bestseller3" />
+                                    <div class="icon">
+                                        <p>Nonno 01<br />289,000 won</p>
+                                        <img src="./images/comm/Vector.svg" alt="" class="heart" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/main/best seller4.png" alt="bestseller4" />
+                                    <div class="icon">
+                                        <p>Rob KC1<br />289,000 won</p>
+                                        <img src="./images/comm/Vector.svg" alt="" class="heart" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./images/main/best seller5.png" alt="bestseller5" />
+                                    <div class="icon">
+                                        <p>Gaussian 01<br />340,000 won</p>
+                                        <img src="./images/comm/Vector.svg" alt="" class="heart" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="vm">
+                            <a href="#"
+                                >VIEW MORE
+                                <img src="./images/comm/arrow-b.png" alt="viewmore" />
+                            </a>
+                        </span>
+                    </div>
+
+                    <!-- PC -->
+                    <div class="best-pc">
+                        <div class="horizon-scroll-area">
+                            <a class="card" href="/business/carbon.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span><img src="./images/main/best seller1.png" alt="" /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <strong>LOCOCO01</strong>
+                                            <small>330,000WON</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <strong>LOCOCO01</strong>
+                                        <small>330,000WON</small>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="card" href="/business/galvanized.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span><img src="./images/main/best seller2.png" alt="" /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <strong>Alio X 01</strong>
+                                            <small>310,000 WON</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <strong>Alio X 01</strong>
+                                        <small>310,000 WON</small>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="card" href="/business/stamp.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span
+                                                ><img src="https://www.samnok.co.kr/asset/img/main/s4_img03.jpg" alt=""
+                                            /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <small>도장</small>
+                                            <strong>PAINTING</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <small>도장</small>
+                                        <strong>PAINTING</strong>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a class="card" href="/business/logistic.php">
+                                <div class="img-area cursor-area">
+                                    <div class="mini-box">
+                                        <div class="img-box">
+                                            <span
+                                                ><img src="https://www.samnok.co.kr/asset/img/main/s4_img04.jpg" alt=""
+                                            /></span>
+                                        </div>
+                                        <div class="txt-box n1">
+                                            <small>물류</small>
+                                            <strong>DISTRIBUTION</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="txt-area cursor-area">
+                                    <div class="txt-box n2">
+                                        <small>물류</small>
+                                        <strong>DISTRIBUTION</strong>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brandissue-mb">
+                    <h2 class="issue-tit">BRAND ISSUE</h2>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./images/main/brand issue1.jpg" alt="" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./images/main/brand issue2.png" alt="" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./images/main/brand issue3.png" alt="" /></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#"><img src="./images/main/brand issue4.png" alt="" /></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <span class="vm">
+                        <a href="#">
+                            VIEW MORE
+                            <img src="./images/comm/arrow-b.png" alt="viewmore" />
+                        </a>
+                    </span>
+                </div>
+
+                <div class="brandissue-pc">
+                    <div class="section horizontal-scroll"></div>
+                    <div class="section horizontal-pin">
+                        <div class="horizontal-panel a">
+                            <h1 class="issue-tit">
+                                JENNI X GENTLE MONSTER <br />
+                                GENTLE HOME <br /><br />
+                                <p>
+                                    Introducing the ‘Gentle Home’ collection, which embodies the fantasy world dreamed
+                                    of by Gentle Monster and Blackpink Jennie. 'Gentle Home' is based on the motif of a
+                                    dollhouse that makes us feel nostalgic for our childhood, and contains the hope of
+                                    living with an imaginary fantasy.
+                                </p>
+                            </h1>
+                            <img src="./images/main/brand issue1.jpg" alt="" />
+                        </div>
+                        <div class="horizontal-panel b">
+                            <h1 class="issue-tit">
+                                2018 CAMPAIGN <br />
+                                'RED WIDE OPEN' <br /><br />
+                                <p>
+                                    The Gentle Monster 2018 Collection ‘RED WIDE OPEN’ owes its inspiration to the 1999
+                                    Stanley Kubrik Film, ‘Eyes Wide Shut’. ‘RED WIDE OPEN’ connotes the spirit that
+                                    ‘challenges aesthetics and possibilities’, twisting the underlying code of the
+                                    secret society in the movie “my eyes are shut to your misdeeds, brother”
+                                </p>
+                            </h1>
+                            <img src="./images/main/brand issue2.jpg" alt="" />
+                        </div>
+                        <div class="horizontal-panel c">
+                            <h1 class="issue-tit">
+                                BOLD COLLECTION WITH SON <br /><br />
+                                <p>
+                                    Gentle Monster presents a campaign for its new collection line 'BOLD' with soccer
+                                    player Son Heung-min. The newly released Bold collection depicts the shape of
+                                    galactic stars as a metaphorical symbol of bravery and boldness. Through the Bold
+                                    collection with Son Heung-min, who is boldly writing new history, experience moments
+                                    that transcended the limits of different fields.
+                                </p>
+                            </h1>
+                            <img src="./images/main/brand issue3.jpg" alt="" />
+                        </div>
+                        <div class="horizontal-panel d">
+                            <h1 class="issue-tit">
+                                EYE WEAR COLLECTION <br /><br />
+                                <p>
+                                    Gentle Monster presents – “FEARLESS; Facing the unknown” – the newest 2020 campaign
+                                    that explores Gentle Monster’s innovative spirit and curiosity of the unknown.
+                                    Photographer Hugo Comte presents the visualization of Gentle Monster’s core DNA, the
+                                    sensation of learning is always greater than the fear of the unknown. Discover 'the
+                                    New Flatba' alongside 'the T-optical' series with designs inspired by the lines and
+                                    movement of nature.
+                                </p>
+                            </h1>
+                            <img src="./images/main/brand issue4.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store">
+                    <p class="storetit1">STORE HOUSE DOSAN</p>
+                    <p class="storetit1-1">
+                        50 Apgujeong-ro 46-gil, Gangnam-gu, Seoul <br />
+                        +82 070 4128 2122 <br />
+                        Monday–Sunday 11:00am–9:00pm
+                    </p>
+                    <div class="image-area__image" data-scroll="target">
+                        <img src="./images/main/store.png" alt="" />
+                    </div>
+                    <p class="storetit2">
+                        We want to present a new direction for future retail in Gentle Monster’s unique way. <br />
+                        HAUS DOSAN is the starting point of another Future Tail that Gentle Monster will introduce in
+                        the future. <br />
+                        In addition to Gentle Monster, the cosmetic brand 'Tamburins', which aims for sensuous beauty,
+                        and 'Nudake', which embodies new fantasies through desserts, <br />
+                        are also located in this space. The future retail that Gentle Monster will show starts with HAUS
+                        DOSAN, and in the future, <br />
+                        consumers will continue to be able to encounter spaces created by the brand's new attempts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section2 marquee">
+                <div class="marquee-track l">
+                    <h1>
+                        MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE
+                        MONSTER GENTLE MONSTER
+                    </h1>
+                </div>
+                <div class="marquee-track r">
+                    <h1>
+                        GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE
+                        MONSTER GENTLE MONSTER
+                    </h1>
+                </div>
+                <div class="marquee-track l">
+                    <h1>
+                        MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE
+                        MONSTER GENTLE MONSTER
+                    </h1>
+                </div>
+            </div>
+
+            <div id="footer-mb">
+                <ul class="depth1">
+                    <li class="depth1-1">
+                        <a href="">
+                            SERVICE
+                            <img src="./images/comm/arrow-w.png" alt="arrow-w" />
+                        </a>
+                        <ul class="depth2 -1">
+                            <li><a href="#">INQUIRY</a></li>
+                            <li><a href="#">DELIVERY</a></li>
+                            <li><a href="#">PICK UP</a></li>
+                            <li><a href="#">GIFT</a></li>
+                            <li><a href="#">REPAIR SERVICE</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1-2">
+                        <a href="#">
+                            NOTICE
+                            <img src="./images/comm/arrow-w.png" alt="arrow-w" />
+                        </a>
+                        <ul class="depth2 -2">
+                            <li><a href="#">TEAM USE</a></li>
+                            <li><a href="#">PRIVACY POLICY</a></li>
+                            <li><a href="#">COOKIE POLICY</a></li>
+                            <li><a href="#">CERTIFICATE OF AUTHENTICITY</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1-3">
+                        <a href="#">
+                            SOCIAL
+                            <img src="./images/comm/arrow-w.png" alt="arrow-w" />
+                        </a>
+                        <ul class="depth2 -3">
+                            <li><a href="#">FACEBOOK</a></li>
+                            <li><a href="#">INSTAGRAM</a></li>
+                            <li><a href="#">YOUTUBE</a></li>
+                            <li><a href="#">TWITTER</a></li>
+                            <li><a href="#">KAKAOTALK</a></li>
+                            <li><a href="#">PINTEREST</a></li>
+                            <li><a href="#">WECHAT</a></li>
+                            <li><a href="#">WEIBO</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-              <li><a href="#">COLLABORATION</a></li>
-              <li><a href="#">STYLE</a></li>
-              <li><a href="#">STORIES</a></li>
-              <li><a href="#">STORE</a></li>
-              <li><a href="#">SERVICES</a></li>
-              <ul class="depth2">
-                <li><a href="#">LOG IN</a></li>
-                <li><a href="#">CART</a></li>
-              </ul>
-            </ul>
-            <div class="logo2">
-              <img src="./images/comm/LOGO 2.png" alt="logo" />
+                <div class="gnb-bottom">
+                    <div class="contect">1600-2126 | cs@gentlemonster.com</div>
+                    <div class="copyright">All rights reserved. IICOMBINED Co., Ltd.<br />© 2023 GENTLE MONSTER</div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div id="slide">
-        <div class="auto-scroll-wrap">
-          <div
-            id="splide-autoscroll"
-            class="splide"
-            aria-label="Beautiful Images"
-          >
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide">
-                  <img src="./images/main/slide1.png" alt="" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./images/main/slide2.png" alt="" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./images/main/slide3.png" alt="" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./images/main/slide4.png" alt="" />
-                </li>
-                <li class="splide__slide">
-                  <img src="./images/main/slide5.png" alt="" />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="slide-tit">GENTLE MONSTER<br />2024 COLLECTION</div>
-      </div>
 
-      <div id="main">
-        <div class="section">
-          <ul class="depth1">
-            <li>
-              <a href="#">
-                <img src="./images/main/banner1.jpg" alt="bnr1" />
-                <p class="txt1">SUNGLASS</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/main/banner2.jpg" alt="bnr2" />
-                <p class="txt1">GLASS</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/main/banner3.jpg" alt="bnr3" />
-                <p class="txt1">COLLABORATION</p>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./images/main/banner4.jpg" alt="bnr4" />
-                <p class="txt1">STYLE</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bestseller">
-          <div class="best-mb">
-            <h2 class="best-tit">BEST SELLER</h2>
-            <div class="swiper best-slide">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="./images/main/best seller1.png" alt="bestseller1" />
-                  <div class="icon">
-                    <p>Lococo 01<br />330,000 won</p>
-                    <img src="./images/comm/Vector.svg" alt="" class="heart" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/main/best seller2.png" alt="bestseller2" />
-                  <div class="icon">
-                    <p>Alio X 01<br />310,000 won</p>
-                    <img src="./images/comm/Vector.svg" alt="" class="heart" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/main/best seller3.png" alt="bestseller3" />
-                  <div class="icon">
-                    <p>Nonno 01<br />289,000 won</p>
-                    <img src="./images/comm/Vector.svg" alt="" class="heart" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/main/best seller4.png" alt="bestseller4" />
-                  <div class="icon">
-                    <p>Rob KC1<br />289,000 won</p>
-                    <img src="./images/comm/Vector.svg" alt="" class="heart" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./images/main/best seller5.png" alt="bestseller5" />
-                  <div class="icon">
-                    <p>Gaussian 01<br />340,000 won</p>
-                    <img src="./images/comm/Vector.svg" alt="" class="heart" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <span class="vm">
-              <a href="#"
-                >VIEW MORE
-                <img src="./images/comm/arrow-b.png" alt="viewmore" />
-              </a>
-            </span>
-          </div>
-
-          <!-- PC -->
-          <div class="best-pc">
-            <div class="horizon-scroll-area">
-              <a class="card" href="/business/carbon.php">
-                <div class="img-area cursor-area">
-                  <div class="mini-box">
-                    <div class="img-box">
-                      <span
-                        ><img src="./images/main/best seller1.png" alt=""
-                      /></span>
+            <div id="footer-pc">
+                <ul class="memu">
+                    <li class="memuli -1">
+                        <a href="#" class="tit"> SERVICE </a>
+                        <ul class="depth2 -1">
+                            <li><a href="#">INQUIRY</a></li>
+                            <li><a href="#">DELIVERY</a></li>
+                            <li><a href="#">PICK UP</a></li>
+                            <li><a href="#">GIFT</a></li>
+                            <li><a href="#">REPAIR SERVICE</a></li>
+                        </ul>
+                    </li>
+                    <li class="memuli -2">
+                        <a href="#" class="tit"> NOTICE </a>
+                        <ul class="depth2 -2">
+                            <li><a href="#">TEAM USE</a></li>
+                            <li><a href="#">PRIVACY POLICY</a></li>
+                            <li><a href="#">COOKIE POLICY</a></li>
+                            <li><a href="#">CERTIFICATE OF AUTHENTICITY</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="memuli -3">
+                        <a href="#" class="tit"> SOCIAL </a>
+                        <ul class="depth2 -3">
+                            <li><a href="#">FACEBOOK</a></li>
+                            <li><a href="#">INSTAGRAM</a></li>
+                            <li><a href="#">YOUTUBE</a></li>
+                            <li><a href="#">TWITTER</a></li>
+                            <li><a href="#">KAKAOTALK</a></li>
+                            <li><a href="#">PINTEREST</a></li>
+                            <li><a href="#">WECHAT</a></li>
+                            <li><a href="#">WEIBO</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="gnb-bottom">
+                    <div class="contect">cs@gentlemonster.com | 1600-2126</div>
+                    <div class="copyright">
+                        Business registration number: 119-86-38589 | Representative: hangukkim | Mail Order Business
+                        Report No. 2014-Seoul Mapo-1050 ( Check business information ) | <br />
+                        Personal Information Protection Officer: taehojeong | 41 5gil Eoulmadang-ro mapogu seoul | All
+                        rights reserved. IICOMBINED Co., Ltd. | © 2023 GENTLE MONSTER
                     </div>
-                    <div class="txt-box n1">
-                      <strong>LOCOCO01</strong>
-                      <small>330,000WON</small>
-                    </div>
-                  </div>
                 </div>
-
-                <div class="txt-area cursor-area">
-                  <div class="txt-box n2">
-                    <strong>LOCOCO01</strong>
-                    <small>330,000WON</small>
-                  </div>
-                </div>
-              </a>
-
-              <a class="card" href="/business/galvanized.php">
-                <div class="img-area cursor-area">
-                  <div class="mini-box">
-                    <div class="img-box">
-                      <span
-                        ><img src="./images/main/best seller2.png" alt=""
-                      /></span>
-                    </div>
-                    <div class="txt-box n1">
-                      <strong>Alio X 01</strong>
-                      <small>310,000 WON</small>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="txt-area cursor-area">
-                  <div class="txt-box n2">
-                    <strong>Alio X 01</strong>
-                    <small>310,000 WON</small>
-                  </div>
-                </div>
-              </a>
-
-              <a class="card" href="/business/stamp.php">
-                <div class="img-area cursor-area">
-                  <div class="mini-box">
-                    <div class="img-box">
-                      <span
-                        ><img
-                          src="https://www.samnok.co.kr/asset/img/main/s4_img03.jpg"
-                          alt=""
-                      /></span>
-                    </div>
-                    <div class="txt-box n1">
-                      <small>도장</small>
-                      <strong>PAINTING</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="txt-area cursor-area">
-                  <div class="txt-box n2">
-                    <small>도장</small>
-                    <strong>PAINTING</strong>
-                  </div>
-                </div>
-              </a>
-
-              <a class="card" href="/business/logistic.php">
-                <div class="img-area cursor-area">
-                  <div class="mini-box">
-                    <div class="img-box">
-                      <span
-                        ><img
-                          src="https://www.samnok.co.kr/asset/img/main/s4_img04.jpg"
-                          alt=""
-                      /></span>
-                    </div>
-                    <div class="txt-box n1">
-                      <small>물류</small>
-                      <strong>DISTRIBUTION</strong>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="txt-area cursor-area">
-                  <div class="txt-box n2">
-                    <small>물류</small>
-                    <strong>DISTRIBUTION</strong>
-                  </div>
-                </div>
-              </a>
             </div>
-          </div>
         </div>
-
-        <div class="brandissue-mb">
-          <h2 class="issue-tit">BRAND ISSUE</h2>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue1.jpg" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue2.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue3.png" alt=""
-                /></a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue4.png" alt=""
-                /></a>
-              </div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-
-          <span class="vm">
-            <a href="#">
-              VIEW MORE
-              <img src="./images/comm/arrow-b.png" alt="viewmore" />
-            </a>
-          </span>
-        </div>
-
-        <div class="brandissue-pc">
-          <div class="section horizontal-scroll"></div>
-          <div class="section horizontal-pin">
-            <div class="horizontal-panel a">
-              <h1 class="issue-tit">
-                JENNI X GENTLE MONSTER <br />
-                GENTLE HOME <br /><br />
-                <p>
-                  Introducing the ‘Gentle Home’ collection, which embodies the
-                  fantasy world dreamed of by Gentle Monster and Blackpink
-                  Jennie. 'Gentle Home' is based on the motif of a dollhouse
-                  that makes us feel nostalgic for our childhood, and contains
-                  the hope of living with an imaginary fantasy.
-                </p>
-              </h1>
-              <img src="./images/main/brand issue1.jpg" alt="" />
-            </div>
-            <div class="horizontal-panel b">
-              <h1 class="issue-tit">
-                2018 CAMPAIGN <br />
-                'RED WIDE OPEN' <br /><br />
-                <p>
-                  The Gentle Monster 2018 Collection ‘RED WIDE OPEN’ owes its
-                  inspiration to the 1999 Stanley Kubrik Film, ‘Eyes Wide Shut’.
-                  ‘RED WIDE OPEN’ connotes the spirit that ‘challenges
-                  aesthetics and possibilities’, twisting the underlying code of
-                  the secret society in the movie “my eyes are shut to your
-                  misdeeds, brother”
-                </p>
-              </h1>
-              <img src="./images/main/brand issue2.jpg" alt="" />
-            </div>
-            <div class="horizontal-panel c">
-              <h1 class="issue-tit">
-                BOLD COLLECTION WITH SON <br /><br />
-                <p>
-                  Gentle Monster presents a campaign for its new collection line
-                  'BOLD' with soccer player Son Heung-min. The newly released
-                  Bold collection depicts the shape of galactic stars as a
-                  metaphorical symbol of bravery and boldness. Through the Bold
-                  collection with Son Heung-min, who is boldly writing new
-                  history, experience moments that transcended the limits of
-                  different fields.
-                </p>
-              </h1>
-              <img src="./images/main/brand issue3.jpg" alt="" />
-            </div>
-            <div class="horizontal-panel d">
-              <h1 class="issue-tit">
-                EYE WEAR COLLECTION <br /><br />
-                <p>
-                  Gentle Monster presents – “FEARLESS; Facing the unknown” – the
-                  newest 2020 campaign that explores Gentle Monster’s innovative
-                  spirit and curiosity of the unknown. Photographer Hugo Comte
-                  presents the visualization of Gentle Monster’s core DNA, the
-                  sensation of learning is always greater than the fear of the
-                  unknown. Discover 'the New Flatba' alongside 'the T-optical'
-                  series with designs inspired by the lines and movement of
-                  nature.
-                </p>
-              </h1>
-              <img src="./images/main/brand issue4.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-
-        <div class="store">
-          <p class="storetit1">STORE HOUSE DOSAN</p>
-          <p class="storetit1-1">
-            50 Apgujeong-ro 46-gil, Gangnam-gu, Seoul <br />
-            +82 070 4128 2122 <br />
-            Monday–Sunday 11:00am–9:00pm
-          </p>
-          <div class="image-area__image" data-scroll="target">
-            <img src="./images/main/store.png" alt="" />
-          </div>
-          <p class="storetit2">
-            We want to present a new direction for future retail in Gentle
-            Monster’s unique way. <br />
-            HAUS DOSAN is the starting point of another Future Tail that Gentle
-            Monster will introduce in the future. <br />
-            In addition to Gentle Monster, the cosmetic brand 'Tamburins', which
-            aims for sensuous beauty, and 'Nudake', which embodies new fantasies
-            through desserts, <br />
-            are also located in this space. The future retail that Gentle
-            Monster will show starts with HAUS DOSAN, and in the future, <br />
-            consumers will continue to be able to encounter spaces created by
-            the brand's new attempts.
-          </p>
-        </div>
-      </div>
-
-      <div class="section2 marquee">
-        <div class="marquee-track l">
-          <h1>
-            MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER
-            GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER
-          </h1>
-        </div>
-        <div class="marquee-track r">
-          <h1>
-            GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE
-            MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER
-          </h1>
-        </div>
-        <div class="marquee-track l">
-          <h1>
-            MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER
-            GENTLE MONSTER GENTLE MONSTER GENTLE MONSTER
-          </h1>
-        </div>
-      </div>
-
-      <div id="footer-mb">
-        <ul class="depth1">
-          <li class="depth1-1">
-            <a href="">
-              SERVICE
-              <img src="./images/comm/arrow-w.png" alt="arrow-w" />
-            </a>
-            <ul class="depth2 -1">
-              <li><a href="#">INQUIRY</a></li>
-              <li><a href="#">DELIVERY</a></li>
-              <li><a href="#">PICK UP</a></li>
-              <li><a href="#">GIFT</a></li>
-              <li><a href="#">REPAIR SERVICE</a></li>
-            </ul>
-          </li>
-          <li class="depth1-2">
-            <a href="#">
-              NOTICE
-              <img src="./images/comm/arrow-w.png" alt="arrow-w" />
-            </a>
-            <ul class="depth2 -2">
-              <li><a href="#">TEAM USE</a></li>
-              <li><a href="#">PRIVACY POLICY</a></li>
-              <li><a href="#">COOKIE POLICY</a></li>
-              <li><a href="#">CERTIFICATE OF AUTHENTICITY</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="depth1-3">
-            <a href="#">
-              SOCIAL
-              <img src="./images/comm/arrow-w.png" alt="arrow-w" />
-            </a>
-            <ul class="depth2 -3">
-              <li><a href="#">FACEBOOK</a></li>
-              <li><a href="#">INSTAGRAM</a></li>
-              <li><a href="#">YOUTUBE</a></li>
-              <li><a href="#">TWITTER</a></li>
-              <li><a href="#">KAKAOTALK</a></li>
-              <li><a href="#">PINTEREST</a></li>
-              <li><a href="#">WECHAT</a></li>
-              <li><a href="#">WEIBO</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="gnb-bottom">
-          <div class="contect">1600-2126 | cs@gentlemonster.com</div>
-          <div class="copyright">
-            All rights reserved. IICOMBINED Co., Ltd.<br />© 2023 GENTLE MONSTER
-          </div>
-        </div>
-      </div>
-
-      <div id="footer-pc">
-        <ul class="memu">
-          <li class="memuli -1">
-            <a href="#" class="tit"> SERVICE </a>
-            <ul class="depth2 -1">
-              <li><a href="#">INQUIRY</a></li>
-              <li><a href="#">DELIVERY</a></li>
-              <li><a href="#">PICK UP</a></li>
-              <li><a href="#">GIFT</a></li>
-              <li><a href="#">REPAIR SERVICE</a></li>
-            </ul>
-          </li>
-          <li class="memuli -2">
-            <a href="#" class="tit"> NOTICE </a>
-            <ul class="depth2 -2">
-              <li><a href="#">TEAM USE</a></li>
-              <li><a href="#">PRIVACY POLICY</a></li>
-              <li><a href="#">COOKIE POLICY</a></li>
-              <li><a href="#">CERTIFICATE OF AUTHENTICITY</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="memuli -3">
-            <a href="#" class="tit"> SOCIAL </a>
-            <ul class="depth2 -3">
-              <li><a href="#">FACEBOOK</a></li>
-              <li><a href="#">INSTAGRAM</a></li>
-              <li><a href="#">YOUTUBE</a></li>
-              <li><a href="#">TWITTER</a></li>
-              <li><a href="#">KAKAOTALK</a></li>
-              <li><a href="#">PINTEREST</a></li>
-              <li><a href="#">WECHAT</a></li>
-              <li><a href="#">WEIBO</a></li>
-            </ul>
-          </li>
-        </ul>
-        <div class="gnb-bottom">
-          <div class="contect">cs@gentlemonster.com | 1600-2126</div>
-          <div class="copyright">
-            Business registration number: 119-86-38589 | Representative:
-            hangukkim | Mail Order Business Report No. 2014-Seoul Mapo-1050 (
-            Check business information ) | <br />
-            Personal Information Protection Officer: taehojeong | 41 5gil
-            Eoulmadang-ro mapogu seoul | All rights reserved. IICOMBINED Co.,
-            Ltd. | © 2023 GENTLE MONSTER
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

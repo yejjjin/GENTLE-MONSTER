@@ -728,6 +728,9 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
+  .bestseller {
+    display: none;
+  }
   .bestseller .best-mb {
     display: none;
   }
@@ -736,6 +739,9 @@ body {
     height: 1080px;
     background-color: #000;
   }
+}
+.brandissue-mb {
+  display: none;
 }
 .brandissue-mb .issue-tit {
   padding-left: 20px;
