@@ -739,6 +739,10 @@ body {
     height: 1080px;
     background-color: #000;
   }
+  .img-box {
+    height: 500px;
+    width: 400px;
+  }
 }
 .brandissue-mb {
   display: none;
