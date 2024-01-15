@@ -219,20 +219,13 @@
 
 // bestseller pc
 @media screen and (min-width: 1280px) {
-  .bestseller {
+  .best-mb {
     display: none;
-    .best-mb {
-      display: none;
-    }
   }
   .best-pc {
     display: flex;
-    height: 1080px;
     background-color: $secondary;
-  }
-  .img-box {
-    height: 500px;
-    width: 400px;
+    height: 900px;
   }
 }
 

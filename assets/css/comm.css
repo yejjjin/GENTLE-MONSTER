@@ -728,20 +728,13 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
-  .bestseller {
-    display: none;
-  }
-  .bestseller .best-mb {
+  .best-mb {
     display: none;
   }
   .best-pc {
     display: flex;
-    height: 1080px;
     background-color: #000;
-  }
-  .img-box {
-    height: 500px;
-    width: 400px;
+    height: 900px;
   }
 }
 .brandissue-mb {
