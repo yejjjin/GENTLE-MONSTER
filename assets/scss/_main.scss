@@ -223,9 +223,15 @@
     display: none;
   }
   .best-pc {
-    display: flex;
+    padding: 150px;
     background-color: $secondary;
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+    }
   }
 }
 

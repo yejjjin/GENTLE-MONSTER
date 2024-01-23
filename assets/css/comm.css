@@ -732,9 +732,16 @@ body {
     display: none;
   }
   .best-pc {
-    display: flex;
+    padding: 150px;
     background-color: #000;
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+  }
+  .best-pc img {
+    width: 400px;
+    height: 500px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .brandissue-mb {
