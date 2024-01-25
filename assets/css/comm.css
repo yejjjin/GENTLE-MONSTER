@@ -737,12 +737,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .best-pc img {
-    width: 400px;
-    height: 500px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 .brandissue-mb {
   display: none;
