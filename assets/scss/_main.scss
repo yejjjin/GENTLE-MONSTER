@@ -223,15 +223,24 @@
     display: none;
   }
   .best-pc {
-    padding: 150px;
     background-color: $secondary;
     display: flex;
     flex-direction: column;
-    // img {
-    //   width: 400px;
-    //   height: 500px;
-    //   object-fit: cover;
-    // }
+    section {
+      display: flex;
+      // align-items: center;
+      margin: 50px 0 50px 50px;
+      img {
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+      }
+      p {
+        font-size: 60px;
+        -webkit-text-stroke: 1px $uniqe;
+        padding: 350px 0 0 50px;
+      }
+    }
   }
 }
 

@@ -145,6 +145,7 @@ function fn() {
   );
 }
 
-// AOS.init({
-//   duration: 1200,
-// });
+// products-pc
+AOS.init({
+  duration: 1200,
+});
