@@ -223,42 +223,64 @@
     display: none;
   }
   .best-pc {
+    padding-top: 100px;
     background-color: $secondary;
     display: flex;
     flex-direction: column;
     section {
       display: flex;
-      // align-items: center;
-      margin: 50px 0 50px 50px;
+      margin: 50px 180px;
       img {
         width: 400px;
         height: 500px;
         object-fit: cover;
       }
       p {
-        font-size: 60px;
+        font-family: "MaziusDisplayi";
+        font-size: 70px;
         -webkit-text-stroke: 1px $uniqe;
-        padding: 350px 0 0 50px;
+        padding: 350px 50px 0 50px;
       }
+    }
+    .fade-left {
+      justify-content: flex-end;
     }
   }
 }
 
-.brandissue-mb {
+// brandissue-mb
+.brandissue-pc {
   display: none;
+}
+.brandissue-mb {
+  display: flex;
+  flex-direction: column;
   .issue-tit {
     padding-left: 20px;
   }
-  .vm {
-    padding-left: 20px;
+  a {
     img {
-      padding-left: 20px;
+      width: 100%;
+      object-fit: cover;
+    }
+    p {
+      font-family: "MaziusDisplayR";
+      color: $primary;
+      text-align: center;
+      padding-top: 20px;
     }
   }
 
+  .vm {
+    margin-left: 20px;
+    // img {
+
+    // }
+  }
+
   .swiper {
+    background-color: $secondary;
     width: 100%;
-    height: 250px;
     margin: 10px 0 20px;
   }
 
@@ -268,11 +290,8 @@
     align-items: center;
   }
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+  .swiper-pagination {
+    padding-top: 10px;
   }
 
   .swiper-pagination-bullet {
@@ -295,12 +314,19 @@
   }
 
   .brandissue-pc {
-    height: 600vh;
+    max-width: 1920px;
+    width: 100%;
+    display: block;
+    height: 587.5vh;
     .section {
       height: 1080px;
+      max-width: 1920px;
+      width: 100%;
     }
 
     .horizontal-scroll {
+      max-width: 1920px;
+      width: 100%;
       height: 0;
       display: flex;
       flex-direction: row;
@@ -309,6 +335,8 @@
     }
 
     .horizontal-panel {
+      max-width: 1920px;
+      width: 100%;
       color: $uniqe;
       text-align: center;
       background-color: #000;
@@ -348,21 +376,34 @@
 }
 
 // store mb
-.store {
-  margin: 70px 0 95.56px 0;
-  a {
+.store-pc {
+  display: none;
+}
+.store-mb {
+  margin-top: 50px;
+  .storetit1 {
+    font-size: 18px;
+  }
+  .storetit1-1 {
+    font-size: 15px;
+  }
+
+  img {
     display: block;
-    img {
-      width: 100%;
-      height: 202.44px;
-      display: block;
-    }
+    height: 250px;
+    max-width: 1280px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
 // store pc
 @media screen and (min-width: 1280px) {
-  .store {
+  .store-mb {
+    display: none;
+  }
+  .store-pc {
+    display: block;
     background-color: #f3f3f3;
     text-align: center;
     margin: 0 auto;

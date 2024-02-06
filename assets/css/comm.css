@@ -336,10 +336,10 @@ body {
 }
 
 .wrap {
-  min-height: calc(305vh - 400px);
   display: flex;
   flex-direction: column;
-  max-width: 430px;
+  max-width: 760px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -361,17 +361,25 @@ body {
   height: 10px;
   display: block;
 }
-#footer-mb .depth1 {
+#footer-mb ul {
   margin-top: 40px;
   font-size: 20px;
 }
-#footer-mb .depth1 li {
+#footer-mb ul li {
   position: relative;
   padding: 0 20px;
 }
-#footer-mb .depth1 li a {
+#footer-mb ul li a {
   display: flex;
   flex-direction: column;
+  color: #fff;
+}
+#footer-mb .depth2 {
+  display: none;
+  font-size: 15px;
+}
+#footer-mb .depth2 a {
+  display: block;
   color: #fff;
 }
 #footer-mb .gnb-bottom {
@@ -388,14 +396,6 @@ body {
 }
 #footer-mb .gnb-bottom .copyright {
   font-size: 8px;
-}
-#footer-mb .depth2 {
-  display: none;
-  font-size: 15px;
-}
-#footer-mb .depth2 a {
-  display: block;
-  color: #fff;
 }
 
 #footer-pc {
@@ -732,13 +732,14 @@ body {
     display: none;
   }
   .best-pc {
+    padding-top: 100px;
     background-color: #000;
     display: flex;
     flex-direction: column;
   }
   .best-pc section {
     display: flex;
-    margin: 50px 0 50px 50px;
+    margin: 50px 180px;
   }
   .best-pc section img {
     width: 400px;
@@ -747,26 +748,43 @@ body {
        object-fit: cover;
   }
   .best-pc section p {
-    font-size: 60px;
+    font-family: "MaziusDisplayi";
+    font-size: 70px;
     -webkit-text-stroke: 1px #24ff00;
-    padding: 350px 0 0 50px;
+    padding: 350px 50px 0 50px;
+  }
+  .best-pc .fade-left {
+    justify-content: flex-end;
   }
 }
-.brandissue-mb {
+.brandissue-pc {
   display: none;
+}
+
+.brandissue-mb {
+  display: flex;
+  flex-direction: column;
 }
 .brandissue-mb .issue-tit {
   padding-left: 20px;
 }
-.brandissue-mb .vm {
-  padding-left: 20px;
+.brandissue-mb a img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.brandissue-mb .vm img {
-  padding-left: 20px;
+.brandissue-mb a p {
+  font-family: "MaziusDisplayR";
+  color: #fff;
+  text-align: center;
+  padding-top: 20px;
+}
+.brandissue-mb .vm {
+  margin-left: 20px;
 }
 .brandissue-mb .swiper {
+  background-color: #000;
   width: 100%;
-  height: 250px;
   margin: 10px 0 20px;
 }
 .brandissue-mb .swiper-slide {
@@ -774,12 +792,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-.brandissue-mb .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.brandissue-mb .swiper-pagination {
+  padding-top: 10px;
 }
 .brandissue-mb .swiper-pagination-bullet {
   --swiper-theme-color: #24ff00;
@@ -792,12 +806,19 @@ body {
     display: none;
   }
   .brandissue-pc {
-    height: 600vh;
+    max-width: 1920px;
+    width: 100%;
+    display: block;
+    height: 587.5vh;
   }
   .brandissue-pc .section {
     height: 1080px;
+    max-width: 1920px;
+    width: 100%;
   }
   .brandissue-pc .horizontal-scroll {
+    max-width: 1920px;
+    width: 100%;
     height: 0;
     display: flex;
     flex-direction: row;
@@ -805,6 +826,8 @@ body {
     overflow-x: hidden;
   }
   .brandissue-pc .horizontal-panel {
+    max-width: 1920px;
+    width: 100%;
     color: #24ff00;
     text-align: center;
     background-color: #000;
@@ -839,45 +862,59 @@ body {
        object-fit: cover;
   }
 }
-.store {
-  margin: 70px 0 95.56px 0;
+.store-pc {
+  display: none;
 }
-.store a {
+
+.store-mb {
+  margin-top: 50px;
+}
+.store-mb .storetit1 {
+  font-size: 18px;
+}
+.store-mb .storetit1-1 {
+  font-size: 15px;
+}
+.store-mb img {
   display: block;
-}
-.store a img {
+  height: 250px;
+  max-width: 1280px;
   width: 100%;
-  height: 202.44px;
-  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 1280px) {
-  .store {
+  .store-mb {
+    display: none;
+  }
+  .store-pc {
+    display: block;
     background-color: #f3f3f3;
     text-align: center;
     margin: 0 auto;
   }
-  .store .image-area__image {
+  .store-pc .image-area__image {
     display: flex;
     justify-content: center;
     margin: 0 auto;
   }
-  .store .image-area__image .img {
+  .store-pc .image-area__image .img {
     display: block;
     margin: 0 auto;
     height: 900px;
     width: 100%;
   }
-  .store .storetit1 {
+  .store-pc .storetit1 {
     font-size: 50px;
     padding-top: 100px;
   }
-  .store .storetit1-1 {
+  .store-pc .storetit1-1 {
     font-size: 28px;
     font-family: "PretendardR";
     padding-top: 50px;
   }
-  .store .storetit2 {
+  .store-pc .storetit2 {
     font-family: "PretendardR";
     padding: 80px 50px 150px 0;
     font-size: 25px;

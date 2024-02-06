@@ -93,6 +93,8 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/comm.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- BESTSELLER SCROLL -->
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
@@ -266,17 +268,17 @@
               <img src="./images/main/best seller1.png" alt="" />
               <p>Lococo 01</p>
             </section>
-            <section data-aos="fade-right">
-              <img src="./images/main/best seller2.png" alt="" />
+            <section class="fade-left" data-aos="fade-left">
               <p>Alio X 01</p>
+              <img src="./images/main/best seller2.png" alt="" />
             </section>
             <section data-aos="fade-right">
               <img src="./images/main/best seller3.png" alt="" />
               <p>Nonno 01</p>
             </section>
-            <section data-aos="fade-right">
-              <img src="./images/main/best seller4.png" alt="" />
+            <section class="fade-left" data-aos="fade-left">
               <p>Rob KC1</p>
+              <img src="./images/main/best seller4.png" alt="" />
             </section>
             <section data-aos="fade-right">
               <img src="./images/main/best seller5.png" alt="" />
@@ -290,24 +292,34 @@
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue1.jpg" alt=""
-                /></a>
+                <a href="#">
+                  <img src="./images/main/brand issue1.jpg" alt="" />
+                  <p>
+                    JENNI X GENTLE MONSTER <br />
+                    GENTLE HOME
+                  </p>
+                </a>
               </div>
               <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue2.png" alt=""
-                /></a>
+                <a href="#">
+                  <img src="./images/main/brand issue2.jpg" alt="" />
+                  <p>
+                    2018 CAMPAIGN <br />
+                    'RED WIDE OPEN'
+                  </p>
+                </a>
               </div>
               <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue3.png" alt=""
-                /></a>
+                <a href="#">
+                  <img src="./images/main/brand issue3.jpg" alt="" />
+                  <p>BOLD COLLECTION WITH SON</p>
+                </a>
               </div>
               <div class="swiper-slide">
-                <a href="#"
-                  ><img src="./images/main/brand issue4.png" alt=""
-                /></a>
+                <a href="#">
+                  <img src="./images/main/brand issue4.jpg" alt="" />
+                  <p>EYE WEAR COLLECTION</p>
+                </a>
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -387,7 +399,18 @@
           </div>
         </div>
 
-        <div class="store">
+        <div class="store-mb">
+          <p class="storetit1">STORE HOUSE DOSAN</p>
+          <p class="storetit1-1">
+            50 Apgujeong-ro 46-gil, Gangnam-gu, Seoul <br />
+            +82 070 4128 2122 <br />
+            Monday–Sunday 11:00am–9:00pm
+          </p>
+
+          <img src="./images/main/store.png" alt="" />
+        </div>
+
+        <div class="store-pc">
           <p class="storetit1">STORE HOUSE DOSAN</p>
           <p class="storetit1-1">
             50 Apgujeong-ro 46-gil, Gangnam-gu, Seoul <br />
@@ -435,13 +458,13 @@
       </div>
 
       <div id="footer-mb">
-        <ul class="depth1">
-          <li class="depth1-1">
+        <ul>
+          <li class="depth1" onclick="toggleDepth2(this)">
             <a href="">
               SERVICE
               <img src="./images/comm/arrow-w.png" alt="arrow-w" />
             </a>
-            <ul class="depth2 -1">
+            <ul class="depth2">
               <li><a href="#">INQUIRY</a></li>
               <li><a href="#">DELIVERY</a></li>
               <li><a href="#">PICK UP</a></li>
@@ -449,12 +472,12 @@
               <li><a href="#">REPAIR SERVICE</a></li>
             </ul>
           </li>
-          <li class="depth1-2">
+          <li class="depth1">
             <a href="#">
               NOTICE
               <img src="./images/comm/arrow-w.png" alt="arrow-w" />
             </a>
-            <ul class="depth2 -2">
+            <ul class="depth2">
               <li><a href="#">TEAM USE</a></li>
               <li><a href="#">PRIVACY POLICY</a></li>
               <li><a href="#">COOKIE POLICY</a></li>
@@ -462,12 +485,12 @@
               <li><a href="#">FAQ</a></li>
             </ul>
           </li>
-          <li class="depth1-3">
+          <li class="depth1">
             <a href="#">
               SOCIAL
               <img src="./images/comm/arrow-w.png" alt="arrow-w" />
             </a>
-            <ul class="depth2 -3">
+            <ul class="depth2">
               <li><a href="#">FACEBOOK</a></li>
               <li><a href="#">INSTAGRAM</a></li>
               <li><a href="#">YOUTUBE</a></li>

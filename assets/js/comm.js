@@ -45,7 +45,7 @@ var swiper = new Swiper(".best-slide", {
 });
 
 var swiper = new Swiper(".mySwiper", {
-  spaceBetween: 30,
+  spaceBetween: 5,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".horizontal-scroll",
       pin: true,
-      scrub: 0.6,
+      scrub: 1,
       markers: false,
       end: () => `+=${horizontalScroll.offsetWidth * scrollPanels.length}`,
     },
@@ -148,4 +148,33 @@ function fn() {
 // products-pc
 AOS.init({
   duration: 1200,
+});
+
+// footer
+document.addEventListener("DOMContentLoaded", function () {
+  var depth1Links = document.querySelectorAll(".depth1 a");
+  var depth2Menus = document.querySelectorAll(".depth2");
+
+  depth1Links.forEach(function (depth1Link, index) {
+    depth1Link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // Toggle the visibility of the depth2 submenu
+      depth2Menus[index].classList.toggle("active");
+
+      // Rotate the arrow icon based on the active state
+      depth1Link.querySelector(".arrow-icon").style.transform = depth2Menus[
+        index
+      ].classList.contains("active")
+        ? "rotate(180deg)"
+        : "rotate(0deg)";
+
+      // Set the max-height for smooth transition
+      depth2Menus[index].style.maxHeight = depth2Menus[
+        index
+      ].classList.contains("active")
+        ? depth2Menus[index].scrollHeight + "px"
+        : 0;
+    });
+  });
 });
