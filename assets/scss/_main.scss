@@ -207,13 +207,16 @@
 }
 
 .vm {
+  font-size: 14px;
   font-family: $font-Defult;
   height: 41px;
+  a {
+    display: block;
+  }
 
   img {
     width: 100%;
     height: 10px;
-    display: block;
   }
 }
 
@@ -261,7 +264,6 @@
   a {
     img {
       width: 100%;
-      object-fit: cover;
     }
     p {
       font-family: "MaziusDisplayR";
@@ -273,9 +275,10 @@
 
   .vm {
     margin-left: 20px;
-    // img {
-
-    // }
+    font-size: 14px;
+    a {
+      display: block;
+    }
   }
 
   .swiper {
@@ -291,11 +294,12 @@
   }
 
   .swiper-pagination {
-    padding-top: 10px;
+    position: static;
+    margin: 10px;
   }
 
   .swiper-pagination-bullet {
-    --swiper-theme-color: #24ff00;
+    background-color: $uniqe;
     width: var(
       --swiper-pagination-bullet-width,
       var(--swiper-pagination-bullet-size, 5px)
@@ -381,11 +385,14 @@
 }
 .store-mb {
   margin-top: 50px;
-  .storetit1 {
+  .storetit {
     font-size: 18px;
+    padding: 15px 20px;
   }
-  .storetit1-1 {
+  .store-info {
     font-size: 15px;
+    text-align: center;
+    padding: 20px 0 70px;
   }
 
   img {

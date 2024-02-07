@@ -151,30 +151,26 @@ AOS.init({
 });
 
 // footer
-document.addEventListener("DOMContentLoaded", function () {
-  var depth1Links = document.querySelectorAll(".depth1 a");
-  var depth2Menus = document.querySelectorAll(".depth2");
+$(document).ready(function () {
+  // Toggle the visibility of ul when ft-tit is clicked
+  $(".ft-tit").click(function (e) {
+    e.preventDefault(); // Prevent the default action (scrolling)
 
-  depth1Links.forEach(function (depth1Link, index) {
-    depth1Link.addEventListener("click", function (event) {
-      event.preventDefault();
+    // Toggle the visibility of the clicked ul
+    $(this)
+      .next("ul")
+      .slideToggle(function () {
+        // Calculate the total height of visible ul elements
+        var totalHeight = 0;
+        $(".button ul:visible").each(function () {
+          totalHeight += $(this).outerHeight(true);
+        });
 
-      // Toggle the visibility of the depth2 submenu
-      depth2Menus[index].classList.toggle("active");
-
-      // Rotate the arrow icon based on the active state
-      depth1Link.querySelector(".arrow-icon").style.transform = depth2Menus[
-        index
-      ].classList.contains("active")
-        ? "rotate(180deg)"
-        : "rotate(0deg)";
-
-      // Set the max-height for smooth transition
-      depth2Menus[index].style.maxHeight = depth2Menus[
-        index
-      ].classList.contains("active")
-        ? depth2Menus[index].scrollHeight + "px"
-        : 0;
-    });
+        // Set the min-height of #footer-mb to include the content and button
+        $("#footer-mb").css(
+          "min-height",
+          totalHeight + $(".gnb-bottom").outerHeight(true)
+        );
+      });
   });
 });
