@@ -127,6 +127,11 @@
             <span class="blind">전체 메뉴 보기</span>
           </label>
           <div id="gnb">
+            <form action="/action_page.php">
+              <i class="las la-search"></i>
+              <input type="search" placeholder="SEARCH" />
+              <div class="search-bar"></div>
+            </form>
             <ul class="depth1">
               <li>
                 <a href="#">SHOP</a>
@@ -140,10 +145,12 @@
               <li><a href="#">STORIES</a></li>
               <li><a href="#">STORE</a></li>
               <li><a href="#">SERVICES</a></li>
-              <ul class="depth2">
-                <li><a href="#">LOG IN</a></li>
-                <li><a href="#">CART</a></li>
-              </ul>
+              <li>
+                <ul class="mymenu">
+                  <li><a href="#">LOG IN</a></li>
+                  <li><a href="#">CART</a></li>
+                </ul>
+              </li>
             </ul>
             <div class="logo2">
               <img src="./images/comm/LOGO 2.png" alt="logo" />
