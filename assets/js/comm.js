@@ -1,4 +1,4 @@
-// splide
+// pc splide
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide("#splide-autoscroll", {
     type: "loop",
@@ -150,7 +150,7 @@ AOS.init({
   duration: 1200,
 });
 
-// footer
+// footer moblie
 $(document).ready(function () {
   // Toggle the visibility of ul when ft-tit is clicked
   $(".ft-tit").click(function (e) {
