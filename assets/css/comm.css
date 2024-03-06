@@ -960,7 +960,7 @@ body {
   }
   .store-pc .storetit2 {
     font-family: "PretendardR";
-    padding: 80px 50px 150px 0;
+    padding: 80px 50px 150px 50px;
     font-size: 25px;
     text-align: center;
   }

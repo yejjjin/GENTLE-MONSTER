@@ -1,4 +1,4 @@
-// slide
+// splide
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide("#splide-autoscroll", {
     type: "loop",
