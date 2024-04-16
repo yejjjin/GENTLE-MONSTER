@@ -646,12 +646,13 @@ body {
 @media screen and (min-width: 1280px) {
   #slide {
     position: relative;
-    height: 1080px;
+    height: 100vh;
     display: flex;
     align-items: center;
   }
   #slide .auto-scroll-wrap {
     display: flex;
+    margin-bottom: 150px;
   }
   #slide .slide-tit {
     font-size: 25px;

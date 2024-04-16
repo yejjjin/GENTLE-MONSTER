@@ -68,11 +68,13 @@
 @media screen and (min-width: 1280px) {
   #slide {
     position: relative;
-    height: 1080px;
+    height: 100vh;
     display: flex;
     align-items: center;
+
     .auto-scroll-wrap {
       display: flex;
+      margin-bottom: 150px;
     }
 
     .slide-tit {
